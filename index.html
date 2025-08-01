@@ -1,587 +1,399 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Początki z Treningiem Siłowym – Kompletny poradnik dla początkujących</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <meta name="description" content="Dowiedz się, dlaczego warto zacząć trening siłowy, jak prawidłowo wykonywać ćwiczenia oraz jakie plany treningowe wybrać na start. Kompletny poradnik treningu siłowego dla początkujących." />
-  <meta name="keywords" content="trening siłowy, ćwiczenia siłowe, plan treningowy, technika ćwiczeń, regeneracja, suplementacja, budowa mięśni" />
-  <meta name="author" content="SiłowniaStart.pl" />
-  <link rel="canonical" href="https://silowniastart.pl/" />
-
-  <meta property="og:title" content="Początki z Treningiem Siłowym – Kompletny poradnik dla początkujących" />
-  <meta property="og:description" content="Dowiedz się, dlaczego warto zacząć trening siłowy, jak prawidłowo wykonywać ćwiczenia oraz jakie plany treningowe wybrać na start. Kompletny poradnik treningu siłowego dla początkujących." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://silowniastart.pl/" />
-  <meta property="og:image" content="https://silowniastart.pl/fot2.png" />
-  <meta property="og:image:alt" content="Wnętrze nowoczesnej siłowni z wyposażeniem" />
-  <meta property="og:locale" content="pl_PL" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Początki z Treningiem Siłowym – Kompletny poradnik dla początkujących" />
-  <meta name="twitter:description" content="Dowiedz się, dlaczego warto zacząć trening siłowy, jak prawidłowo wykonywać ćwiczenia oraz jakie plany treningowe wybrać na start. Kompletny poradnik treningu siłowego dla początkujących." />
-  <meta name="twitter:image" content="https://silowniastart.pl/fot2.png" />
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      background-color: #fff;
-      color: #333;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    header {
-      background-color: #007b5e;
-      color: #fff;
-      padding: 1rem 2rem;
-      position: sticky;
-    }
-    footer {
-      background-color: #007b5e;
-      color: #fff;
-      padding: 1rem 2rem;
-    }
-    header a {
-      color: #c4f0db;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    header a:hover,
-    header a:focus {
-      color: #fff;
-      text-decoration: underline;
-    }
-    .banner img {
-      margin: 0 auto;
-      height: auto;
-      display: block;
-      width: 50%;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Początki z Treningiem Siłowym – Kompletny poradnik</title>
+<style>
+  /* Reset i podstawy */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: #1e1e2f;
+    color: #fff;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+  }
+  nav {
+    background: #292940;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav a {
+    color: #cfcfff;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover, nav a.active {
+    background: #5050a0;
+    color: #fff;
+  }
+  main {
+    flex-grow: 1;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px 60px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 0.1);
+  }
+  section {
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+  }
+  section:last-child {
+    border: none;
+  }
+  h2 {
+    color: #1e1e2f;
+    margin-bottom: 16px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    border-left: 5px solid #5050a0;
+    padding-left: 12px;
+  }
+  p {
+    font-size: 1rem;
+    margin-bottom: 14px;
+    color: #444;
+  }
+  ul {
+    list-style: disc inside;
+    margin-bottom: 14px;
+    color: #444;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
+  strong {
+    color: #30307a;
+  }
+  /* Kalkulatory */
+  .calculator {
+    background: #f0f2ff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 450px;
+    margin-top: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  }
+  .calculator label {
+    display: block;
+    font-weight: 600;
+    margin-top: 12px;
+  }
+  .calculator input[type="number"],
+  .calculator select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+  }
+  .calculator button {
+    margin-top: 18px;
+    background: #5050a0;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  .calculator button:hover {
+    background: #3f3f7a;
+  }
+  .result {
+    margin-top: 16px;
+    font-weight: 700;
+    color: #222;
+    background: #d6d9ff;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px 10px;
+    background: #1e1e2f;
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
     main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: 0 auto;
+      margin: 20px 15px;
+      padding: 15px 15px 40px;
     }
-    .section {
-      margin-bottom: 3rem;
+    nav {
+      flex-direction: column;
+      align-items: center;
     }
-    .section h2 {
-      color: #007b5e;
-      margin-bottom: 1rem;
-    }
-    .plan-table {
+    nav a {
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      text-align: center;
+      padding: 14px 0;
+      border-bottom: 1px solid #3f3f7a;
     }
-    .plan-table th,
-    .plan-table td {
-      border: 1px solid #007b5e;
-      padding: 0.5rem 1rem;
-      text-align: left;
-    }
-    .plan-table th {
-      background-color: #c4f0db;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    .dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-    .dark-mode header,
-    .dark-mode footer {
-      background-color: #004d40;
-      color: #a5d6a7;
-    }
-    .dark-toggle-btn {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: inherit;
-    }
-    .faq {
-      margin-top: 2rem;
-    }
-    .faq h3 {
-      margin-bottom: 0.5rem;
-      cursor: pointer;
-      color: #007b5e;
-    }
-    .faq p {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      display: none;
-    }
-    .faq h3.active + p {
-      display: block;
-    }
-    h2{
-      color: #007b5e;
-    }
-       table.plan-czterodniowy {
-      width: 100%;
-      border-collapse: collapse;
-      font-family: Arial, sans-serif;
-      color: #2c3e50; 
-      background-color: #f9fbfc; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-top: 20px;
-    }
-    table.plan-czterodniowy th, 
-    table.plan-czterodniowy td {
-      border: 1px solid #bdc3c7; 
-      padding: 10px 15px;
-      text-align: left;
-    }
-    table.plan-czterodniowy thead {
-      background-color: #34495e; 
-      color: #ecf0f1; 
-    }
-    table.plan-czterodniowy tbody tr:nth-child(even) {
-      background-color: #e8f0f5; 
-    }
-    table.plan-czterodniowy tbody tr:hover {
-      background-color: #d1e4f3; 
-      cursor: default;
-    }
-    .hero {
-        text-align: center;
-        margin: 1rem 0;
-    }
-    .hero img {
-        max-width: 100%;
-        height: auto;
-        width: 50%;
-        border-radius: 8px;
-    }
-
+  }
 </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Początki z Treningiem Siłowym – Kompletny poradnik dla początkujących",
-    "description": "Dowiedz się, dlaczego warto zacząć trening siłowy, jak prawidłowo wykonywać ćwiczenia oraz jakie plany treningowe wybrać na start.",
-    "image": "https://silowniastart.pl/fot2.png",
-    "author": {
-      "@type": "Organization",
-      "name": "SiłowniaStart.pl"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SiłowniaStart.pl",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://silowniastart.pl/logo.png"
-      }
-    },
-    "datePublished": "2025-07-20",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://silowniastart.pl/"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Ile razy w tygodniu powinienem chodzić na siłownię na start?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dla początkujących optymalne są 3–4 treningi w tygodniu z przynajmniej jednym dniem przerwy pomiędzy sesjami."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Jakie ćwiczenia są najlepsze dla początkujących?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Najlepiej zacząć od ćwiczeń wielostawowych, takich jak przysiady, martwy ciąg, wyciskanie sztangi czy podciąganie. Są skuteczne i angażują wiele partii mięśniowych jednocześnie."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Jak długo trzeba czekać na efekty?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Pierwsze zmiany możesz zauważyć już po 4–6 tygodniach regularnych ćwiczeń i odpowiedniego odżywiania. Na większe efekty potrzeba kilku miesięcy konsekwencji."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Czy warto brać kreatynę jako początkujący?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Kreatyna jest jednym z najlepiej przebadanych suplementów i może pomóc zwiększyć siłę oraz przyspieszyć regenerację. Jest bezpieczna, także dla początkujących – pod warunkiem, że masz dobrze ułożoną dietę i trenujesz regularnie."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Kiedy najlepiej trenować – rano czy wieczorem?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Najlepiej trenować wtedy, kiedy masz najwięcej energii i możesz się skupić. Nie ma jednej idealnej pory – liczy się systematyczność."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
-
 <body>
+
 <header>
-  <section style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <h1 style="color: #c4f0db; margin: 0;">Początki z Treningiem Siłowym</h1>
-    <nav role="navigation" aria-label="Menu główne" style="flex: 1; text-align: center;">
-      <a href="#warto">Dlaczego warto?</a>
-      <a href="#technika">Technika</a>
-      <a href="#partie">Partie</a>
-      <a href="#plany">Plany</a>
-      <a href="#suplementacja">Suplementacja</a>
-      <a href="#regeneracja">Regeneracja</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <button id="darkModeToggle" class="dark-toggle-btn" aria-label="Zmień tryb kolorów" style="margin-left: auto;">🌙</button>
-  </section>
+  <h1>Początki z Treningiem Siłowym – Kompletny poradnik</h1>
 </header>
 
-<section class="hero">
-  <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" alt="Siłownia z hantlami i sztangą">
-</section>
+<nav>
+  <a href="#start" class="active">Jak zacząć?</a>
+  <a href="#errors">Typowe błędy</a>
+  <a href="#weights">Dobór obciążenia</a>
+  <a href="#plans">Podział planów</a>
+  <a href="#diet">Podstawy diety</a>
+  <a href="#supplements">Suplementy</a>
+  <a href="#calculators">Kalkulatory</a>
+</nav>
 
 <main>
-  <section class="section" id="warto">
-  <h2>Dlaczego warto trenować siłowo?</h2>
-  <p>Trening siłowy przynosi wiele korzyści dla ciała i umysłu. Oto najważniejsze z nich:</p>
-  <ul>
-    <li><strong>Budowa mięśni</strong> – poprawa sylwetki i siły fizycznej.</li>
-    <li><strong>Przyspieszenie metabolizmu</strong> – łatwiejsze spalanie kalorii i kontrola wagi.</li>
-    <li><strong>Wzmocnienie stawów i kości</strong> – mniejsze ryzyko kontuzji i lepsza stabilność.</li>
-    <li><strong>Poprawa postawy</strong> – silniejsze mięśnie głębokie i mniej bólu pleców.</li>
-    <li><strong>Korzyści psychiczne</strong> – redukcja stresu, lepszy nastrój i większa pewność siebie.</li>
-    <li><strong>Lepsze zdrowie metaboliczne</strong> – niższe ryzyko cukrzycy typu 2 i chorób serca.</li>
-    <li><strong>Długowieczność i sprawność</strong> – trening siłowy opóźnia procesy starzenia się organizmu.</li>
-  </ul>
-</section>
-
-  <section class="section" id="technika">
-    <h2>Technika ćwiczeń – podstawa bezpieczeństwa i efektywności</h2>
-    <p>Jednym z najważniejszych aspektów treningu siłowego jest prawidłowa technika wykonywania ćwiczeń. Nieprawidłowa forma może prowadzić do kontuzji i znacznie obniżyć efektywność treningu. Dlatego przed rozpoczęciem treningu warto poświęcić czas na naukę prawidłowego ustawienia ciała, zakresu ruchu oraz kontroli nad ciężarem.</p>
-    <p>Dobrym sposobem na opanowanie techniki jest korzystanie z porad profesjonalnych trenerów, oglądanie sprawdzonych filmów instruktażowych oraz ćwiczenie przed lustrem lub z partnerem, który może zwrócić uwagę na błędy. Na początku warto wybierać mniejsze obciążenia, by skupić się na jakości ruchu, a dopiero później stopniowo zwiększać ciężary. Pamiętaj też o odpowiednim rozgrzewaniu się przed treningiem i rozciąganiu po ćwiczeniach, co pomaga zapobiegać urazom i poprawia regenerację mięśni.</p>
+  <section id="start">
+    <h2>Jak zacząć krok po kroku?</h2>
+    <p>Start w treningu siłowym to często moment pełen entuzjazmu, ale też niepewności. Warto podejść do tego świadomie i z planem, by uniknąć błędów i osiągnąć trwałe efekty.</p>
+    <ol>
+      <li><strong>Zdefiniuj cele:</strong> Chcesz zbudować masę mięśniową, zredukować tkankę tłuszczową, czy po prostu poprawić sylwetkę i zdrowie? Jasne cele pozwolą dobrać odpowiedni plan.</li>
+      <li><strong>Zbadaj swoje zdrowie:</strong> Jeśli masz problemy zdrowotne, skonsultuj się z lekarzem przed rozpoczęciem intensywnych ćwiczeń.</li>
+      <li><strong>Zapoznaj się z podstawami techniki:</strong> Naucz się prawidłowej formy ćwiczeń – to klucz do bezpieczeństwa i skuteczności. Wykorzystaj trenerów, kursy online, tutoriale wideo.</li>
+      <li><strong>Rozpocznij od prostych ćwiczeń:</strong> Przysiady, martwy ciąg, wyciskanie na ławce, podciąganie. Nie śpiesz się z ciężarami, najpierw opanuj ruch.</li>
+      <li><strong>Ustal regularność treningów:</strong> Dla początkujących idealne są 3 sesje w tygodniu z dniami przerwy na regenerację.</li>
+      <li><strong>Zadbaj o regenerację:</strong> Sen 7-9 godzin na dobę, odpowiednie nawodnienie i dieta to fundamenty sukcesu.</li>
+      <li><strong>Zacznij śledzić postępy:</strong> Prowadź dziennik treningowy, zapisuj ciężary, ilość powtórzeń i samopoczucie.</li>
+    </ol>
+    <p>Pamiętaj, że efekty przychodzą stopniowo – cierpliwość i konsekwencja są ważniejsze niż szybkie rezultaty.</p>
   </section>
 
-  <section class="section" id="partie">
-  <h2>Jakie partie ciała ćwiczyć, by wyglądać estetycznie?</h2>
-  <p>Estetyczna sylwetka to nie tylko duże mięśnie, ale przede wszystkim proporcje i równomierny rozwój ciała. Zamiast skupiać się wyłącznie na jednej partii (np. klatce piersiowej czy bicepsach), warto zadbać o wszystkie kluczowe grupy mięśniowe. Oto partie, na które warto zwrócić szczególną uwagę:</p>
-  <ul>
-    <li><strong>Plecy (szczególnie najszersze grzbietu)</strong> – szerokie plecy tworzą iluzję wąskiej talii i dają kształt litery V.</li>
-    <li><strong>Barki (przede wszystkim boczne aktony)</strong> – dobrze rozwinięte barki poszerzają sylwetkę i dodają atletycznego wyglądu.</li>
-    <li><strong>Klatka piersiowa</strong> – pełna klatka nadaje objętości górnej części ciała i poprawia postawę.</li>
-    <li><strong>Nogi (uda i pośladki)</strong> – proporcjonalna dolna część ciała podkreśla sylwetkę i pokazuje ogólną sprawość fizyczną.</li>
-    <li><strong>Mięśnie brzucha</strong> – nie tylko dla estetyki, ale także dla stabilizacji i zdrowej postawy.</li>
-    <li><strong>Ramiona (biceps i triceps)</strong> – jako dodatek, podkreślają muskulaturę, zwłaszcza przy dobrze rozwiniętych barkach i plecach.</li>
-  </ul>
-  <p>Estetyczna sylwetka to efekt konsekwentnej pracy nad całym ciałem, a nie tylko nad „widocznymi” mięśniami. Dbaj o balans, technikę i odpowiednią regenerację, a rezultaty przyjdą szybciej, niż się spodziewasz.</p>
-</section>
-
-  <section id="plany">
- 
-  <h2>4-dniowy plan treningowy</h2>
-  <p>Pamiętaj, że jest to przykładowy plan dla osoby zaczynającej przygodę z treningiem. Z czasem gdy będziesz poznawał swoje ciało i jego możliwości, możesz zmieniać iloś serii , powtórzeń lub nawet ćwiczenia. Należy również mieć na uwadze, że nie każdemu jest pisany dany plan treningowy, a ja bez żadnej wiedzy o tobie nie jestem w stanie przygotować spersonalizowanego planu. </p>
-  <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: left;">
-  <thead style="background-color:#2E86C1; color: white;">
-    <tr>
-      <th style="border: 1px solid #ddd; padding: 10px;">Dzień</th>
-      <th style="border: 1px solid #ddd; padding: 10px;">Mięśnie / Obszar</th>
-      <th style="border: 1px solid #ddd; padding: 10px;">Ćwiczenie</th>
-      <th style="border: 1px solid #ddd; padding: 10px;">Serie</th>
-      <th style="border: 1px solid #ddd; padding: 10px;">Powtórzenia</th>
-      <th style="border: 1px solid #ddd; padding: 10px;">Uwagi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color:#D6EAF8;">
-      <td rowspan="4" style="border: 1px solid #ddd; padding: 10px; vertical-align: middle;">1</td>
-      <td rowspan="4" style="border: 1px solid #ddd; padding: 10px; vertical-align: middle;">Plecy + Barki</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="H1v3RvqlFNM">Podciąganie nachwytem</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">4</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">6-8</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">Jeśli nie dasz rady 6-8, rób mniej aż dojdziesz do podanego zakresu. Jeśli zrobisz ponad 8 - dołóż ciężar, zejdź do 6</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="fXYWYGrTA0Y">Wiosłowanie hantalmi</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">4</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">8-10</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"></td>
-    </tr>
-    <tr style="background-color:#D6EAF8;">
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="pmYAOPpEyw0">Wyciskanie hantli nad głowę</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">8-10</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"></td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="dYlFWi3MY_8">Wznosy hantli bokiem</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">10-12</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">Lekki ciężar, kontrola ruchu</td>
-    </tr>
-
-    <tr style="background-color:#D6EAF8;">
-      <td rowspan="4" style="border: 1px solid #ddd; padding: 10px; vertical-align: middle;">2</td>
-      <td rowspan="4" style="border: 1px solid #ddd; padding: 10px; vertical-align: middle;">Klatka piersiowa + Triceps</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="Yez7TTi7VWM">Wyciskanie sztangi na ławce poziomej</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">4</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">5-7</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"></td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="ZfbQwJdkW1Y">Pompki (nogi na podwyższeniu)</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">max</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"></td>
-    </tr>
-    <tr style="background-color:#D6EAF8;">
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="EGxfNdeJj98">Rozpiętki z hantlami (lub na maszynie)</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">12</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"></td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="ikmYglifCkQ">Wyciskanie francuskie</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">8-10</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"></td>
-    </tr>
-
-    <tr style="background-color:#D6EAF8;">
-      <td rowspan="4" style="border: 1px solid #ddd; padding: 10px; vertical-align: middle;">3</td>
-      <td rowspan="4" style="border: 1px solid #ddd; padding: 10px; vertical-align: middle;">Nogi (uda, pośladki)</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="oC0wgsKiNxo">Przysiady ze sztangą</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">4</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">6-10</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">Postaraj się pilnować techniki</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="_kE05bfLrUQ">Wykroki z hantlami</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">10 (na nogę)</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"></td>
-    </tr>
-    <tr style="background-color:#D6EAF8;">
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="AWIzVCGszz0">Rumuński martwy ciąg</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">8
-      </td>
-      <td style="border: 1px solid #ddd; padding: 10px;">Hamstringi i pośladki</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="Yz_KagQ5b3Q">Wspięcia na palce (łydki)</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">15-20</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"></td>
-    </tr>
-    <tr style="background-color:#D6EAF8;">
-      <td rowspan="4" style="border: 1px solid #ddd; padding: 10px; vertical-align: middle;">4</td>
-      <td rowspan="4" style="border: 1px solid #ddd; padding: 10px; vertical-align: middle;">Plecy + Barki + Biceps</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="0_igODjLiXM">Martwy ciąg klasyczny</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">4</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">6-8</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"></td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="Zfz-sf2dAcM">Podciąganie podchwytem</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">max</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">Podchwyt omawiany od 3:30</td>
-    </tr>
-    <tr style="background-color:#D6EAF8;">
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="pmYAOPpEyw0">Wyciskanie hantli nad głowę</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">8-10</td>
-      <td style="border: 1px solid #ddd; padding: 10px;"></td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;"><a href="#" class="exercise-link" data-video-id="BNYpFIhFsMg">Uginanie ramion ze sztangą</a></td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">8-10</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">Jeśli brakuje siły, możesz zarzucić ;)</td>
-    </tr>
-  </tbody>
-</table>
-</section>
-
-  <section class="section" id="regeneracja">
-    <h2>Regeneracja – sekret postępów</h2>
-    <p>Regeneracja jest kluczowym elementem każdego programu treningowego. Mięśnie rosną nie podczas samego treningu, ale w czasie odpoczynku. Dlatego warto zadbać o odpowiednią ilość snu (7-9 godzin na dobę), unikać przeciążeń i stosować techniki relaksacyjne, takie jak masaż czy stretching.</p>
-    <p>Ważna jest też dieta bogata w białko, witaminy i minerały, które wspomagają odbudowę tkanek. Nie bój się także robić dni wolnych od treningu – pozwoli to uniknąć przetrenowania i kontuzji.</p>
+  <section id="errors">
+    <h2>Typowe błędy początkujących</h2>
+    <p>Wielu początkujących popełnia podobne błędy, które hamują rozwój i zwiększają ryzyko kontuzji. Oto najczęstsze z nich:</p>
+    <ul>
+      <li><strong>Przekraczanie własnych możliwości:</strong> Chęć szybkiego progresu często prowadzi do podnoszenia zbyt dużych ciężarów, co skutkuje błędną techniką i kontuzjami.</li>
+      <li><strong>Brak planu treningowego:</strong> Trenowanie bez ustalonego planu powoduje niską efektywność i brak progresu.</li>
+      <li><strong>Pomijanie rozgrzewki:</strong> To podstawowy element zapobiegający urazom i przygotowujący mięśnie do wysiłku.</li>
+      <li><strong>Niedocenianie roli regeneracji:</strong> Treningi to tylko połowa sukcesu – mięśnie rosną podczas odpoczynku.</li>
+      <li><strong>Nieodpowiednia technika:</strong> Zła forma ćwiczeń nie tylko obniża efekty, ale może prowadzić do kontuzji.</li>
+      <li><strong>Brak kontroli postępów:</strong> Bez mierzenia efektów trudno dostosować trening i dietę.</li>
+      <li><strong>Ignorowanie diety:</strong> Trening bez odpowiedniego odżywiania daje słabe rezultaty.</li>
+    </ul>
+    <p>Zwróć uwagę na te aspekty od samego początku, a twoja droga na siłownię będzie dużo przyjemniejsza i bezpieczniejsza.</p>
   </section>
 
-  <section class="section" id="suplementacja">
-    <h2>Suplementacja – czy warto?</h2>
-    <p>Choć suplementy nie zastąpią dobrze zbilansowanej diety i regularnego treningu, mogą wspomóc proces budowy mięśni i regeneracji. Najpopularniejsze suplementy dla początkujących to białko serwatkowe, kreatyna i BCAA. Zawsze jednak konsultuj suplementację z lekarzem lub dietetykiem.</p>
+  <section id="weights">
+    <h2>Jak dobrać obciążenie i progresować?</h2>
+    <p>Dobór odpowiedniego ciężaru to podstawa efektywnego treningu. Zbyt lekki ciężar nie pobudzi mięśni, a zbyt ciężki może zagrażać zdrowiu.</p>
+    <p>Oto jak to zrobić poprawnie:</p>
+    <ul>
+      <li><strong>Wybierz ciężar umożliwiający wykonanie 8-12 powtórzeń z poprawną techniką.</strong> Jeśli wykonasz więcej niż 12 bez większego wysiłku, ciężar jest za lekki. Jeśli nie wykonasz minimum 6, jest za ciężki.</li>
+      <li><strong>Stopniowo zwiększaj obciążenie.</strong> Gdy możesz zrobić 12 powtórzeń bez problemu, zwiększ ciężar o 2,5-5%.</li>
+      <li><strong>Progresja może odbywać się również przez zwiększenie liczby serii lub powtórzeń,</strong> ale zwiększanie ciężaru jest najbardziej efektywne dla rozbudowy siły i masy mięśniowej.</li>
+      <li><strong>Regularnie kontroluj technikę.</strong> Jeśli technika się pogarsza, cofnij się do niższego ciężaru i skup się na formie.</li>
+      <li><strong>Używaj dziennika treningowego.</strong> Zapisuj ciężary, ilość powtórzeń i serii, aby śledzić progres.</li>
+    </ul>
+    <p>Przestrzeganie tych zasad zapewni stały rozwój bez przetrenowania i kontuzji.</p>
   </section>
 
-  <section class="section" id="faq-container" style="display: flex; gap: 2rem; flex-wrap: wrap;">
-  <section class="faq" id="faq" role="region" aria-labelledby="faq-title" style="flex: 1 1 400px; min-width: 300px;">
-    <h2 id="faq-title">Najczęściej zadawane pytania (FAQ)</h2>
-    <div>
-      <h3 tabindex="0">Ile razy w tygodniu powinienem chodzić na siłownię na start?</h3>
-      <p>Dla początkujących optymalne są 3–4 treningi w tygodniu z przynajmniej jednym dniem przerwy pomiędzy sesjami.</p>
-    </div>
-    <div>
-      <h3 tabindex="0">Jakie ćwiczenia są najlepsze dla początkujących?</h3>
-      <p>Najlepiej zacząć od ćwiczeń wielostawowych, takich jak przysiady, martwy ciąg, wyciskanie sztangi czy podciąganie. Są skuteczne i angażują wiele partii mięśniowych jednocześnie.</p>
-    </div>
-    <div>
-      <h3 tabindex="0">Jak długo trzeba czekać na efekty?</h3>
-      <p>Pierwsze zmiany możesz zauważyć już po 4–6 tygodniach regularnych ćwiczeń i odpowiedniego odżywiania. Na większe efekty potrzeba kilku miesięcy konsekwencji.</p>
-    </div>
-    <div>
-      <h3 tabindex="0">Czy warto brać kreatynę jako początkujący?</h3>
-      <p>Kreatyna jest jednym z najlepiej przebadanych suplementów i może pomóc zwiększyć siłę oraz przyspieszyć regenerację. Jest bezpieczna, także dla początkujących – pod warunkiem, że masz dobrze ułożoną dietę i trenujesz regularnie.</p>
-    </div>
-    <div>
-      <h3 tabindex="0">Kiedy najlepiej trenować – rano czy wieczorem?</h3>
-      <p>Najlepiej trenować wtedy, kiedy masz najwięcej energii i możesz się skupić. Nie ma jednej idealnej pory – liczy się systematyczność.</p>
-    </div>
+  <section id="plans">
+    <h2>Podział planów treningowych: FBW, Push/Pull/Legs i Split</h2>
+    <p>Wybór odpowiedniego planu zależy od twojego doświadczenia, czasu oraz celów. Oto trzy popularne podziały:</p>
+    <h3>1. FBW (Full Body Workout)</h3>
+    <p>Trening całego ciała podczas jednej sesji, 3 razy w tygodniu. Idealny dla początkujących, pozwala na częstą stymulację mięśni i efektywną regenerację.</p>
+    <ul>
+      <li>Skupia się na podstawowych wielostawowych ćwiczeniach (przysiady, martwy ciąg, wyciskanie).</li>
+      <li>Łatwy do zrealizowania i świetny dla ogólnego rozwoju.</li>
+    </ul>
+    <h3>2. Push/Pull/Legs (PPL)</h3>
+    <p>Podział na trzy dni: dni push (mięśnie wypychające, np. klatka, barki, tricepsy), pull (mięśnie ciągnące, np. plecy, bicepsy) i nogi. Często stosowany 3-6 razy w tygodniu.</p>
+    <ul>
+      <li>Umożliwia większą objętość treningową na każdą grupę mięśniową.</li>
+      <li>Pomaga lepiej się skoncentrować na poszczególnych partiach.</li>
+    </ul>
+    <h3>3. Split</h3>
+    <p>Trening podzielony na partie mięśniowe, np. klatka z tricepsami, plecy z bicepsami, nogi, barki. Stosowany zazwyczaj 4-5 razy w tygodniu przez osoby średniozaawansowane i zaawansowane.</p>
+    <ul>
+      <li>Duża objętość i intensywność na poszczególne partie mięśniowe.</li>
+      <li>Wymaga więcej czasu na treningi i dłuższej regeneracji.</li>
+    </ul>
+    <p>Wybierz plan dopasowany do swoich możliwości i czasu – nie ma jednego idealnego dla wszystkich.</p>
   </section>
 
-  <section class="calculator" aria-label="Kalkulator BMI" style="max-width: 400px; margin: 2rem auto; border: 1px solid #007b5e; padding: 1rem; border-radius: 6px;">
-  <h2>Kalkulator BMI</h2>
-  <label for="weight">Waga (kg):</label><br />
-  <input type="number" id="weight" min="1" max="500" step="0.1" /><br /><br />
-  <label for="height">Wzrost (cm):</label><br />
-  <input type="number" id="height" min="30" max="300" step="0.1" /><br /><br />
-  <button id="calculateBtn">Oblicz BMI</button>
-  <p id="resultBox" style="
-    margin-top: 1rem;
-    font-weight: bold;
-    padding: 0.8rem;
-    border-radius: 5px;
-    transition: background-color 0.5s ease, color 0.5s ease;">
-  </p>
-</section>
+  <section id="diet">
+    <h2>Podstawy diety siłowej</h2>
+    <p>Dieta to kluczowy element treningu siłowego, bez niej efekty będą mocno ograniczone. Oto najważniejsze zasady:</p>
+    <ul>
+      <li><strong>Bilans kaloryczny:</strong> Aby budować mięśnie, spożywaj nadwyżkę kaloryczną (~250-500 kcal ponad zapotrzebowanie). Przy redukcji tkanki tłuszczowej – deficyt kaloryczny.</li>
+      <li><strong>Białko:</strong> Najważniejszy makroskładnik. Celuj w 1,6-2,2 g białka na kg masy ciała dziennie, najlepiej z wysokiej jakości źródeł (mięso, jaja, nabiał, rośliny strączkowe).</li>
+      <li><strong>Węglowodany:</strong> Główne źródło energii. Warto dostarczać je zwłaszcza przed i po treningu, by zapewnić siłę i regenerację.</li>
+      <li><strong>Tłuszcze:</strong> Nie pomijaj ich. Zdrowe tłuszcze (oleje roślinne, orzechy, ryby) wspierają hormony i ogólne zdrowie.</li>
+      <li><strong>Hydratacja:</strong> Pij dużo wody – minimum 2-3 litry dziennie, więcej przy intensywnym treningu.</li>
+    </ul>
+    <p>Podstawą jest dieta urozmaicona, oparta na naturalnych, nieprzetworzonych produktach. Unikaj pustych kalorii i nadmiaru cukrów prostych.</p>
+  </section>
 
-<section class="instruction-video" style="margin-top: 2rem; text-align:center;">
-  <h2>Instruktaż wideo</h2>
-  <iframe id="instructionFrame"
-          width="90%" height="400"
-          src="https://www.youtube.com/embed/5WUXj3zxJv0" 
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen></iframe>
-</section>
-    
-    </main>
+  <section id="supplements">
+    <h2>Suplementy: co warto, a co to strata pieniędzy?</h2>
+    <p>Suplementy mogą wspomóc trening i regenerację, ale nie zastąpią dobrej diety i treningu. Oto co warto rozważyć:</p>
+    <h3>Suplementy godne uwagi:</h3>
+    <ul>
+      <li><strong>Białko serwatkowe (Whey):</strong> Szybkie źródło wysokiej jakości białka, pomocne zwłaszcza po treningu.</li>
+      <li><strong>Kreatyna monohydrat:</strong> Jeden z najlepiej przebadanych suplementów – wspomaga siłę i wytrzymałość mięśniową.</li>
+      <li><strong>Kofeina:</strong> Poprawia koncentrację i wydolność podczas treningu.</li>
+      <li><strong>Omega-3:</strong> Wspiera zdrowie serca, stawów i redukuje stany zapalne.</li>
+      <li><strong>Witaminy i minerały:</strong> Warto suplementować witaminę D, magnez, cynk, zwłaszcza jeśli dieta jest uboga.</li>
+    </ul>
+    <h3>Suplementy, które często są stratą pieniędzy:</h3>
+    <ul>
+      <li><strong>Wieloskładnikowe boostery testosteronu:</strong> Brak jednoznacznych dowodów na skuteczność.</li>
+      <li><strong>Preparaty „spalające tłuszcz”: </strong> Często nieskuteczne lub mające minimalny efekt bez diety i treningu.</li>
+      <li><strong>Pre-workouty z mnóstwem dodatków:</strong> Mogą działać, ale nie są niezbędne i często mają składniki o niepotwierdzonej skuteczności.</li>
+    </ul>
+    <p>Suplementacja powinna być dodatkiem do dobrze zbilansowanej diety i treningu, a nie podstawą.</p>
+  </section>
 
-<footer role="contentinfo" style="text-align:center;">
-  <p>&copy; 2025 SiłowniaStart.pl. Wszelkie prawa zastrzeżone.</p>
+  <section id="calculators">
+    <h2>Kalkulatory</h2>
+
+    <article aria-label="Kalkulator BMI" class="calculator">
+      <h3>Kalkulator BMI</h3>
+      <label for="bmi-height">Wzrost (cm):</label>
+      <input type="number" id="bmi-height" min="50" max="250" placeholder="np. 175" />
+      <label for="bmi-weight">Waga (kg):</label>
+      <input type="number" id="bmi-weight" min="20" max="300" placeholder="np. 70" />
+      <button id="bmi-calc">Oblicz BMI</button>
+      <div id="bmi-result" class="result" aria-live="polite"></div>
+    </article>
+
+    <article aria-label="Kalkulator zapotrzebowania kalorycznego" class="calculator" style="margin-top:40px;">
+  <h3>Kalkulator zapotrzebowania kalorycznego</h3>
+  <label for="calories-age">Wiek (lata):</label>
+  <input type="number" id="calories-age" min="12" max="100" placeholder="np. 25" />
+  <label for="calories-weight">Waga (kg):</label>
+  <input type="number" id="calories-weight" min="20" max="300" placeholder="np. 75" />
+  <label for="calories-height">Wzrost (cm):</label>
+  <input type="number" id="calories-height" min="100" max="250" placeholder="np. 180" />
+  <label for="calories-gender">Płeć:</label>
+  <select id="calories-gender">
+    <option value="male">Mężczyzna</option>
+    <option value="female">Kobieta</option>
+  </select>
+  <label for="calories-activity">Poziom aktywności:</label>
+  <select id="calories-activity">
+    <option value="1.2">Brak lub bardzo mała (praca siedząca)</option>
+    <option value="1.375">Lekka aktywność (1-3 treningi/tydzień)</option>
+    <option value="1.55">Umiarkowana aktywność (3-5 treningów/tydzień)</option>
+    <option value="1.725">Duża aktywność (6-7 treningów/tydzień)</option>
+    <option value="1.9">Bardzo duża aktywność (praca fizyczna + trening)</option>
+  </select>
+  <label for="calories-goal">Cel:</label>
+  <select id="calories-goal">
+    <option value="maintain">Utrzymać wagę</option>
+    <option value="gain">Przybrać na wadze</option>
+    <option value="lose">Schudnąć</option>
+  </select>
+  <button id="calories-calc">Oblicz zapotrzebowanie</button>
+  <div id="calories-result" class="result" aria-live="polite"></div>
+</article>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Trening Siłowy – Wszystkie prawa zastrzeżone
 </footer>
 
-  <script>
-  
-    const toggleBtn = document.getElementById('darkModeToggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
-      toggleBtn.textContent = isDark ? '☀️' : '🌙';
-    });
-
-    const faqHeaders = document.querySelectorAll('.faq h3');
-    faqHeaders.forEach(header => {
-      header.setAttribute('aria-expanded', 'false');
-      header.addEventListener('click', () => {
-        const isActive = header.classList.toggle('active');
-        const para = header.nextElementSibling;
-        para.style.display = isActive ? "block" : "none";
-        header.setAttribute('aria-expanded', isActive);
-      });
-
-      header.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          header.click();
-        }
-      });
-    });
-    </script>
-   
-</script>
- 
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    const calculateBtn = document.getElementById('calculateBtn');
-    const weightInput = document.getElementById('weight');
-    const heightInput = document.getElementById('height');
-    const resultBox = document.getElementById('resultBox');
-
-    calculateBtn.addEventListener('click', () => {
-      const weight = parseFloat(weightInput.value);
-      const height = parseFloat(heightInput.value) / 100;
-
-      if (!weight || !height || height <= 0) {
-        resultBox.textContent = 'Wprowadź poprawne dane.';
-        resultBox.style.backgroundColor = '#f8d7da';
-        resultBox.style.color = '#721c24';
-        return;
-      }
-
-      const bmi = (weight / (height * height)).toFixed(2);
-      let category = '';
-      let bgColor = '';
-      let textColor = '#fff';
-
-      if (bmi < 18.5) {
-        category = 'Niedowaga';
-        bgColor = '#f1c40f';
-        textColor = '#000';
-      } else if (bmi < 24.9) {
-        category = 'Waga prawidłowa';
-        bgColor = '#2ecc71';
-      } else if (bmi < 29.9) {
-        category = 'Nadwaga';
-        bgColor = '#f39c12';
-      } else {
-        category = 'Otyłość';
-        bgColor = '#e74c3c';
-      }
-
-      resultBox.textContent = `Twoje BMI: ${bmi} (${category})`;
-      resultBox.style.backgroundColor = bgColor;
-      resultBox.style.color = textColor;
-    });
-  });
-</script>    
-
 <script>
-  document.querySelectorAll('.exercise-link').forEach(link => {
+  // Nawigacja smooth scroll + aktywne menu
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const videoId = link.dataset.videoId;
-      const iframe = document.getElementById('instructionFrame');
-      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-      window.scrollTo({
-        top: iframe.offsetTop - 100,
-        behavior: 'smooth'
-      });
+      navLinks.forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
     });
   });
+
+  // Kalkulator BMI
+  document.getElementById('bmi-calc').addEventListener('click', () => {
+    const h = Number(document.getElementById('bmi-height').value);
+    const w = Number(document.getElementById('bmi-weight').value);
+    const res = document.getElementById('bmi-result');
+    if(!h || !w || h < 50 || h > 250 || w < 20 || w > 300) {
+      res.textContent = 'Proszę podać prawidłowy wzrost i wagę.';
+      return;
+    }
+    const heightM = h / 100;
+    const bmi = (w / (heightM * heightM)).toFixed(1);
+    let category = '';
+    if (bmi < 18.5) category = 'Niedowaga';
+    else if (bmi < 25) category = 'Waga prawidłowa';
+    else if (bmi < 30) category = 'Nadwaga';
+    else category = 'Otyłość';
+    res.textContent = `Twoje BMI: ${bmi} (${category})`;
+  });
+
+  // Kalkulator zapotrzebowania kalorycznego (Mifflin-St Jeor)
+  document.getElementById('calories-calc').addEventListener('click', () => {
+  const age = Number(document.getElementById('calories-age').value);
+  const weight = Number(document.getElementById('calories-weight').value);
+  const height = Number(document.getElementById('calories-height').value);
+  const gender = document.getElementById('calories-gender').value;
+  const activity = Number(document.getElementById('calories-activity').value);
+  const goal = document.getElementById('calories-goal').value;
+  const res = document.getElementById('calories-result');
+
+  if (!age || !weight || !height || age < 12 || age > 100 || weight < 20 || weight > 300 || height < 100 || height > 250) {
+    res.textContent = 'Proszę podać prawidłowe dane.';
+    return;
+  }
+
+  let bmr;
+  if (gender === 'male') {
+    bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+  } else {
+    bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+  }
+
+  let tdee = Math.round(bmr * activity);
+
+  if (goal === 'gain') {
+    tdee += 300; // nadwyżka kaloryczna na przyrost masy
+  } else if (goal === 'lose') {
+    tdee -= 500; // deficyt kaloryczny na redukcję
+  }
+
+  res.textContent = `Twoje dzienne zapotrzebowanie kaloryczne (TDEE) wynosi około ${tdee} kcal.`;
+});
 </script>
 
 </body>
