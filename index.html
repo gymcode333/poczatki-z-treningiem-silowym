@@ -28,7 +28,7 @@
 
         /* Sekcja Hero - Nowoczesny Nagłówek */
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1092878/pexels-photo-1092878.jpeg') no-repeat center center fixed; /* Zmieniony obrazek */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1092878/pexels-photo-1092878.jpeg') no-repeat center center fixed;
             background-size: cover;
             color: white;
             text-align: center;
@@ -415,6 +415,29 @@
         header p{
             color: white;
         }
+
+        .read-more-btn {
+            background-color: #3498DB; /* Kolor jak Twoje CTA */
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            margin-top: 10px; /* Odstęp od tekstu */
+            display: inline-block; /* Aby button nie zajmował całej szerokości */
+        }
+
+        .read-more-btn:hover {
+            background-color: #2980B9;
+        }
+
+        /* Możesz też lekko zmodyfikować styl dla .blog-post p aby upewnić się, że odstępy są równe */
+        .blog-post p {
+            margin-bottom: 10px; /* Zapewnia konsekwentny odstęp */
+        }
     </style>
 </head>
 <body>
@@ -496,11 +519,11 @@
     <section id="przykladowe-plany">
         <h2>Przykładowe plany treningowe</h2>
         <section id="uwaga">
-            <p>!Pamiętaj, że dla każdej osoby plan treningowy powinien być dobierany indywidualnie. Poniższe plany mają charakter poglądowy i powinny być traktowane jako punkt wyjścia do stworzenia własnego programu treningowego. Dobieraj ilość powtórzeń w taki sposób, aby trening był wyzwaniem, ale nie kosztem poprawnej techniki!</p>
+            <p id="uwaga">!Pamiętaj, że dla każdej osoby plan treningowy powinien być dobierany indywidualnie. Poniższe plany mają charakter poglądowy i powinny być traktowane jako punkt wyjścia do stworzenia własnego programu treningowego. Dobieraj ilość powtórzeń w taki sposób, aby trening był wyzwaniem, ale nie kosztem poprawnej techniki!</p>
         </section>
 
         <section class="plan-section">
-            <p><h3>FBW - Full Body Workout</h3></p>
+            <h3>FBW - Full Body Workout</h3>
             <p>Ten plan, idealny dla początkujących, angażuje wszystkie grupy mięśniowe podczas jednej sesji. Umożliwia adaptację organizmu do wysiłku i szybkie opanowanie techniki ćwiczeń wielostawowych.</p>
             <table>
                 <thead>
@@ -579,7 +602,7 @@
         </section>
 
         <section class="plan-section">
-            <p><h3>PPL - Push / Pull / Legs</h3></p>
+            <h3>PPL - Push / Pull / Legs</h3>
             <p>To plan oparty na podziale na ruchy pchające (push), ciągnące (pull) oraz trening nóg (legs). Pozwala na większą objętość i intensywność dla poszczególnych partii, przyspieszając progres.</p>
             <table>
                 <thead>
@@ -645,89 +668,89 @@
             </table>
         </section>
 
-    <section class="plan-section">
-    <p><h3>Split</h3></p>
-    <p>Plan dzielony polega na treningu konkretnych grup mięśniowych w oddzielne dni. To popularne rozwiązanie, które pozwala skupić się na każdej partii mięśniowej, co jest korzystne dla bardziej zaawansowanych osób.</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Dzień</th>
-                <th>Ćwiczenie</th>
-                <th>Serie x Powtórzenia</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="4">1 – Klatka i triceps</td>
-                <td>Wyciskanie sztangi na ławce</td>
-                <td>4x8</td>
-            </tr>
-            <tr>
-                <td>Wyciskanie hantli na skosie</td>
-                <td>3x10</td>
-            </tr>
-            <tr>
-                <td>Pompki na poręczach</td>
-                <td>3x10</td>
-            </tr>
-            <tr>
-                <td>Prostowanie ramion na wyciągu</td>
-                <td>3x12</td>
-            </tr>
-            <tr>
-                <td rowspan="4">2 – Plecy i biceps</td>
-                <td>Podciąganie</td>
-                <td>4x6</td>
-            </tr>
-            <tr>
-                <td>Wiosłowanie sztangą</td>
-                <td>4x8</td>
-            </tr>
-            <tr>
-                <td>Face pull</td>
-                <td>3x12</td>
-            </tr>
-            <tr>
-                <td>Uginanie ramion ze sztangą</td>
-                <td>3x10</td>
-            </tr>
-            <tr>
-                <td rowspan="4">3 – Nogi</td>
-                <td>Przysiad ze sztangą</td>
-                <td>4x8</td>
-            </tr>
-            <tr>
-                <td>Martwy ciąg rumuński</td>
-                <td>3x10</td>
-            </tr>
-            <tr>
-                <td>Wykroki</td>
-                <td>3x10</td>
-            </tr>
-            <tr>
-                <td>Łydki stojąc</td>
-                <td>4x15</td>
-            </tr>
-            <tr>
-                <td rowspan="4">4 – Barki i brzuch</td>
-                <td>Wyciskanie żołnierskie</td>
-                <td>4x8</td>
-            </tr>
-            <tr>
-                <td>Unoszenie hantli bokiem</td>
-                <td>3x12</td>
-            </tr>
-            <tr>
-                <td>Plank</td>
-                <td>3x30 sek</td>
-            </tr>
-            <tr>
-                <td>Russian twist</td>
-                <td>3x20</td>
-            </tr>
-        </tbody>
-    </table>
-    </section>
+        <section class="plan-section">
+            <h3>Split</h3>
+            <p>Plan dzielony polega na treningu konkretnych grup mięśniowych w oddzielne dni. To popularne rozwiązanie, które pozwala skupić się na każdej partii mięśniowej, co jest korzystne dla bardziej zaawansowanych osób.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dzień</th>
+                        <th>Ćwiczenie</th>
+                        <th>Serie x Powtórzenia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4">1 – Klatka i triceps</td>
+                        <td>Wyciskanie sztangi na ławce</td>
+                        <td>4x8</td>
+                    </tr>
+                    <tr>
+                        <td>Wyciskanie hantli na skosie</td>
+                        <td>3x10</td>
+                    </tr>
+                    <tr>
+                        <td>Pompki na poręczach</td>
+                        <td>3x10</td>
+                    </tr>
+                    <tr>
+                        <td>Prostowanie ramion na wyciągu</td>
+                        <td>3x12</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">2 – Plecy i biceps</td>
+                        <td>Podciąganie</td>
+                        <td>4x6</td>
+                    </tr>
+                    <tr>
+                        <td>Wiosłowanie sztangą</td>
+                        <td>4x8</td>
+                    </tr>
+                    <tr>
+                        <td>Face pull</td>
+                        <td>3x12</td>
+                    </tr>
+                    <tr>
+                        <td>Uginanie ramion ze sztangą</td>
+                        <td>3x10</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">3 – Nogi</td>
+                        <td>Przysiad ze sztangą</td>
+                        <td>4x8</td>
+                    </tr>
+                    <tr>
+                        <td>Martwy ciąg rumuński</td>
+                        <td>3x10</td>
+                    </tr>
+                    <tr>
+                        <td>Wykroki</td>
+                        <td>3x10</td>
+                    </tr>
+                    <tr>
+                        <td>Łydki stojąc</td>
+                        <td>4x15</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">4 – Barki i brzuch</td>
+                        <td>Wyciskanie żołnierskie</td>
+                        <td>4x8</td>
+                    </tr>
+                    <tr>
+                        <td>Unoszenie hantli bokiem</td>
+                        <td>3x12</td>
+                    </tr>
+                    <tr>
+                        <td>Plank</td>
+                        <td>3x30 sek</td>
+                    </tr>
+                    <tr>
+                        <td>Russian twist</td>
+                        <td>3x20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </section>
 
     <section id="diet">
@@ -757,26 +780,66 @@
     </section>
 
     <section id="blog">
-        <h2><span class="step-icon"></span>Blog📖</h2>
-        <p>Tutaj znajdziesz najnowsze artykuły, porady i ciekawe informacje ze świata treningu siłowego.</p>
-        <div class="blog-grid">
-            <article class="blog-post">
-                <h3>Jak zmotywować się do treningów? 5 prostych sposobów</h3>
-                <p class="post-meta">Opublikowano: 26 sierpnia 2025</p>
-                <p>Motywacja jest jak mięsień – trzeba ją regularnie ćwiczyć. Jeśli czujesz, że Twój zapał maleje, oto kilka sprawdzonych metod, które pomogą Ci wrócić na właściwe tory i utrzymać regularność. Od ustalania realistycznych celów, przez prowadzenie dziennika treningowego, aż po... <a href="#">Czytaj dalej</a></p>
-            </article>
-            <article class="blog-post">
-                <h3>Cardio po, czy przed treningiem siłowym? Odpowiedź, którą musisz znać!</h3>
-                <p class="post-meta">Opublikowano: 20 sierpnia 2025</p>
-                <p>To jedno z najczęstszych pytań w świecie fitness. Czy kolejność ma znaczenie? Dowiedz się, jak prawidłowo łączyć trening cardio i siłowy, aby zmaksymalizować swoje efekty, niezależnie od tego, czy Twoim celem jest budowa masy, czy redukcja tkanki tłuszczowej... <a href="#">Czytaj dalej</a></p>
-            </article>
-            <article class="blog-post">
-                <h3>5 największych mitów na temat kreatyny, w które nadal wierzysz</h3>
-                <p class="post-meta">Opublikowano: 15 sierpnia 2025</p>
-                <p>Kreatyna to jeden z najlepiej przebadanych suplementów, ale wciąż krąży wokół niej mnóstwo fałszywych informacji. Sprawdź, które z powszechnie powtarzanych opinii to tylko mity i dlaczego ten suplement jest bezpieczny i skuteczny dla większości sportowców... <a href="#">Czytaj dalej</a></p>
-            </article>
-        </div>
+    <h2><span class="step-icon"></span>Blog📖</h2>
+    <p>Tutaj znajdziesz najnowsze artykuły, porady i ciekawe informacje ze świata treningu siłowego.</p>
+    <section class="blog-grid">
+        <article class="blog-post">
+            <h3>Jak zmotywować się do treningów? 5 prostych sposobów</h3>
+            <p class="post-meta">Opublikowano: 26 sierpnia 2025</p>
+            <p class="short-text">Motywacja jest jak mięsień – trzeba ją regularnie ćwiczyć. Jeśli czujesz, że Twój zapał maleje, oto kilka sprawdzonych metod, które pomogą Ci wrócić na właściwe tory i utrzymać regularność. Od ustalania realistycznych celów, przez prowadzenie dziennika treningowego, aż po...</p>
+            <section class="full-text" style="display: none;">
+                <p>Oto 5 sprawdzonych sposobów na utrzymanie motywacji:</p>
+                <ol>
+                    <li><strong>Ustalaj małe, mierzalne cele:</strong> Zamiast myśleć "chcę schudnąć 20 kg", postaw sobie cel "w tym tygodniu pójdę na siłownię 3 razy". Osiąganie małych sukcesów buduje pęd do dalszego działania.</li>
+                    <li><strong>Znajdź partnera treningowego:</strong> Ćwiczenie z kimś to świetny sposób na wzajemne motywowanie się. Będzie Wam trudniej odpuścić trening, wiedząc, że druga osoba na Was liczy.</li>
+                    <li><strong>Prowadź dziennik treningowy:</strong> Notowanie postępów (np. większy ciężar, więcej powtórzeń) to namacalny dowód na to, że Twoja praca przynosi efekty. To niezwykle motywujące!</li>
+                    <li><strong>Nagradzaj się:</strong> Po osiągnięciu celu (np. miesiąc regularnych treningów) zrób sobie małą nagrodę – może to być nowa odzież sportowa, masaż lub po prostu ulubiony posiłek.</li>
+                    <li><strong>Zmień swój plan:</strong> Monotonia zabija motywację. Co kilka tygodni wprowadź nowe ćwiczenia, zmień kolejność lub spróbuj zupełnie innej formy aktywności.</li>
+                </ol>
+            </section>
+            <button class="read-more-btn">Czytaj dalej</button>
+        </article>
+
+        <article class="blog-post">
+            <h3>Cardio po, czy przed treningiem siłowym? Odpowiedź, którą musisz znać!</h3>
+            <p class="post-meta">Opublikowano: 20 sierpnia 2025</p>
+            <p class="short-text">To jedno z najczęstszych pytań w świecie fitness. Czy kolejność ma znaczenie? Dowiedz się, jak prawidłowo łączyć trening cardio i siłowy, aby zmaksymalizować swoje efekty, niezależnie od tego, czy Twoim celem jest budowa masy, czy redukcja tkanki tłuszczowej...</p>
+            <section class="full-text" style="display: none;">
+                <p>Odpowiedź na to pytanie zależy głównie od Twojego priorytetu:</p>
+                <p><strong>Jeśli Twoim głównym celem jest budowa siły i masy mięśniowej:</strong><br>
+                Wykonuj trening siłowy jako pierwszy. Potrzebujesz pełni energii i skupienia, aby podnosić duże ciężary z prawidłową techniką. Wykonanie intensywnego cardio przed treningiem siłowym uszczupli Twoje zapasy glikogenu (energii), co negatywnie wpłynie na Twoją wydajność podczas podnoszenia ciężarów.</p>
+                
+                <p><strong>Jeśli Twoim głównym celem jest poprawa wytrzymałości lub spalanie tkanki tłuszczowej:</strong><br>
+                Kolejność ma mniejsze znaczenie, ale wykonanie cardio po treningu siłowym może być nieco bardziej efektywne w spalaniu tłuszczu. Dzieje się tak, ponieważ trening siłowy zużyje część zapasów glikogenu, a organizm podczas późniejszego cardio chętniej sięgnie po rezerwy tłuszczowe jako źródło energii.</p>
+
+                <p><strong>Złoty środek:</strong> Jeśli nie masz konkretnego priorytetu, możesz zacząć od 5-10 minut lekkiego cardio w ramach rozgrzewki przed treningiem siłowym, a dłuższą sesję (20-30 minut) wykonać po jego zakończeniu.</p>
+            </section>
+            <button class="read-more-btn">Czytaj dalej</button>
+        </article>
+
+        <article class="blog-post">
+            <h3>5 największych mitów na temat kreatyny, w które nadal wierzysz</h3>
+            <p class="post-meta">Opublikowano: 15 sierpnia 2025</p>
+            <p class="short-text">Kreatyna to jeden z najlepiej przebadanych suplementów, ale wciąż krąży wokół niej mnóstwo fałszywych informacji. Sprawdź, które z powszechnie powtarzanych opinii to tylko mity i dlaczego ten suplement jest bezpieczny i skuteczny dla większości sportowców...</p>
+            <section class="full-text" style="display: none;">
+                <p>Czas rozprawić się z najpopularniejszymi mitami o kreatynie:</p>
+                <ul>
+                    <li><strong>Mit 1: Kreatyna uszkadza nerki.</strong><br>
+                    <strong>Fakt:</strong> To najpopularniejszy mit. Liczne badania na zdrowych osobach nie wykazały żadnego negatywnego wpływu kreatyny na funkcjonowanie nerek. Problemy mogą wystąpić jedynie u osób z istniejącymi wcześniej chorobami nerek.</li>
+                    <li><strong>Mit 2: Kreatyna powoduje zatrzymywanie wody podskórnej i "nalany" wygląd.</strong><br>
+                    <strong>Fakt:</strong> Kreatyna wiąże wodę, ale głównie w komórkach mięśniowych (tzw. retencja wewnątrzmięśniowa), co jest zjawiskiem pożądanym, prowadzącym do lepszego nawodnienia i wyglądu "pełniejszych" mięśni.</li>
+                    <li><strong>Mit 3: Trzeba robić cykle i przerwy od kreatyny.</strong><br>
+                    <strong>Fakt:</strong> Nie ma naukowych dowodów na to, że cykliczne stosowanie kreatyny jest lepsze od stałej suplementacji. Można bezpiecznie przyjmować standardową dawkę (3-5g) codziennie bez przerw.</li>
+                    <li><strong>Mit 4: Kreatyna jest sterydem anabolicznym.</strong><br>
+                    <strong>Fakt:</strong> To całkowita nieprawda. Kreatyna to naturalnie występujący w organizmie związek (kwas organiczny), który nie ma nic wspólnego ze strukturą ani działaniem hormonów sterydowych.</li>
+                    <li><strong>Mit 5: Konieczna jest "faza ładowania".</strong><br>
+                    <strong>Fakt:</strong> Faza ładowania (przyjmowanie ~20g dziennie przez 5-7 dni) jedynie przyspiesza wysycenie mięśni kreatyną. Taki sam efekt osiągniesz, przyjmując 3-5g dziennie, tyle że zajmie to około 3-4 tygodni. Faza ładowania nie jest konieczna.</li>
+                </ul>
+            </section>
+            <button class="read-more-btn">Czytaj dalej</button>
+        </article>
     </section>
+</section>
 
     <section id="podsumowanie">
         <h2><span class="step-icon"></span>Podsumowanie✅</h2>
@@ -785,103 +848,156 @@
 
     <section id="calculators">
         <h2><span class="step-icon"></span>Kalkulatory📊</h2>
-        <article aria-label="Kalkulator BMI" class="calculator">
+        <article class="calculator">
             <h3>Kalkulator BMI</h3>
             <label for="bmi-height">Wzrost (cm):</label>
             <input type="number" id="bmi-height" min="50" max="250" placeholder="np. 175">
             <label for="bmi-weight">Waga (kg):</label>
             <input type="number" id="bmi-weight" min="20" max="300" placeholder="np. 70">
             <button id="bmi-calc">Oblicz BMI</button>
-            <div id="bmi-result" class="result" aria-live="polite"></div>
+            <p id="bmi-result" class="result" style="display: none;"></p>
         </article>
-        <article aria-label="Kalkulator zapotrzebowania kalorycznego" class="calculator" style="margin-top:40px;">
-            <h3>Kalkulator zapotrzebowania kalorycznego</h3>
-            <label for="calorie-gender">Płeć:</label>
-            <select id="calorie-gender">
-                <option value="male">Mężczyzna</option>
-                <option value="female">Kobieta</option>
-            </select>
-            <label for="calorie-age">Wiek (lata):</label>
-            <input type="number" id="calorie-age" min="10" max="100" placeholder="np. 25">
-            <label for="calorie-height">Wzrost (cm):</label>
-            <input type="number" id="calorie-height" min="50" max="250" placeholder="np. 175">
-            <label for="calorie-weight">Waga (kg):</label>
-            <input type="number" id="calorie-weight" min="20" max="300" placeholder="np. 70">
-            <label for="calorie-activity">Poziom aktywności:</label>
-            <select id="calorie-activity">
-                <option value="1.2">Siedzący tryb życia (mało lub brak ćwiczeń)</option>
-                <option value="1.375">Lekko aktywny (lekkie ćwiczenia 1-3 dni/tydzień)</option>
-                <option value="1.55">Umiarkowanie aktywny (umiarkowane ćwiczenia 3-5 dni/tydzień)</option>
-                <option value="1.725">Bardzo aktywny (intensywne ćwiczenia 6-7 dni/tydzień)</option>
-                <option value="1.9">Ekstremalnie aktywny (bardzo intensywne ćwiczenia/ciężka praca fizyczna)</option>
-            </select>
-            <button id="calorie-calc">Oblicz Kalorie</button>
-            <div id="calorie-result" class="result" aria-live="polite"></div>
-        </article>
+    </section>
+
+    <section id="faq">
+        <h2><span class="step-icon"></span>Najczęściej zadawane pytania (FAQ)📚</h2>
+        <div class="faq-item">
+            <button class="faq-question">1. Ile razy w tygodniu powinienem trenować?</button>
+            <div class="faq-answer">
+                <p>Dla początkujących zaleca się trening 2-3 razy w tygodniu, aby dać organizmowi czas na regenerację i adaptację do nowego wysiłku.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">2. Czy muszę stosować suplementy, aby osiągnąć rezultaty?</button>
+            <div class="faq-answer">
+                <p>Nie. Suplementy są dodatkiem, a nie podstawą. Najważniejsze są: odpowiednia dieta, plan treningowy i regeneracja. Suplementy, takie jak białko serwatkowe czy kreatyna, mogą jedynie wspomóc i zoptymalizować efekty, gdy podstawy są już na wysokim poziomie.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">3. Jaka jest optymalna liczba powtórzeń na budowę masy mięśniowej?</button>
+            <div class="faq-answer">
+                <p>Najczęściej zalecany zakres to 8-12 powtórzeń. Jest to optymalny przedział dla większości osób, ponieważ sprzyja hipertrofii mięśniowej. Ważne jest, aby ostatnie powtórzenia w serii były wyzwaniem.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">4. Czy mogę łączyć trening siłowy z cardio?</button>
+            <div class="faq-answer">
+                <p>Tak. Cardio jest bardzo ważne dla ogólnego zdrowia i kondycji. Jeśli Twoim priorytetem jest budowa masy, wykonuj cardio po treningu siłowym lub w oddzielne dni. Pamiętaj, aby nie przesadzać z intensywnością i czasem trwania, żeby nie spalać za dużo kalorii, które są potrzebne na budowę mięśni.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">5. Jak dbać o regenerację?</button>
+            <div class="faq-answer">
+                <p>Regeneracja to klucz do postępów. Zadbaj o 7-9 godzin snu na dobę, odpowiednią ilość białka w diecie oraz nie trenuj tej samej partii mięśniowej dzień po dniu.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">6. Czy powinienem trenować na czczo?</button>
+            <div class="faq-answer">
+                <p>To zależy od Twojego celu i preferencji. Trening na czczo może pomóc w spalaniu tkanki tłuszczowej, ale może obniżać wydajność i siłę. Lepiej jest zjeść lekki posiłek bogaty w węglowodany, np. banana, 30-60 minut przed treningiem.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">7. Jak uniknąć kontuzji?</button>
+            <div class="faq-answer">
+                <p>Kluczowe jest prawidłowe wykonanie ćwiczeń, odpowiednia rozgrzewka i schłodzenie organizmu po treningu. Zaczynaj od małych ciężarów, stopniowo zwiększając obciążenie, i nie lekceważ bólu, który może sygnalizować problem.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">8. Jak szybko zobaczę pierwsze efekty?</button>
+            <div class="faq-answer">
+                <p>Pierwsze efekty w postaci wzrostu siły można zauważyć już po 2-4 tygodniach. Widoczna zmiana sylwetki zazwyczaj wymaga kilku miesięcy regularnego treningu i trzymania się diety. Pamiętaj, że jest to maraton, a nie sprint.</p>
+            </div>
+        </div>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 gymcode. Wszelkie prawa zastrzeżone.</p>
+    <p>&copy; 2025 Poradnik Treningowy. Wszystkie prawa zastrzeżone.</p>
 </footer>
-<button onclick="topFunction()" id="btnTop" title="Wróć na górę">&#9650;</button>
+
+<button onclick="topFunction()" id="btnTop" title="Przejdź na górę">↑</button>
 
 <script>
-    // Skrypt do kalkulatora BMI
-    document.getElementById('bmi-calc').addEventListener('click', function() {
-        const height = parseFloat(document.getElementById('bmi-height').value);
-        const weight = parseFloat(document.getElementById('bmi-weight').value);
-        const resultDiv = document.getElementById('bmi-result');
-        if (height > 0 && weight > 0) {
-            const bmi = weight / ((height / 100) ** 2);
-            resultDiv.innerHTML = `Twoje BMI to: <strong>${bmi.toFixed(2)}</strong>`;
-        } else {
-            resultDiv.innerHTML = 'Proszę wprowadzić prawidłowe dane.';
-        }
-    });
-
-    // Skrypt do kalkulatora kalorii
-    document.getElementById('calorie-calc').addEventListener('click', function() {
-        const gender = document.getElementById('calorie-gender').value;
-        const age = parseFloat(document.getElementById('calorie-age').value);
-        const height = parseFloat(document.getElementById('calorie-height').value);
-        const weight = parseFloat(document.getElementById('calorie-weight').value);
-        const activity = parseFloat(document.getElementById('calorie-activity').value);
-        const resultDiv = document.getElementById('calorie-result');
-        if (age > 0 && height > 0 && weight > 0) {
-            let bmr;
-            if (gender === 'male') {
-                bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
-            } else {
-                bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
-            }
-            const tdee = bmr * activity;
-            resultDiv.innerHTML = `Twoje dzienne zapotrzebowanie kaloryczne to ok. <strong>${tdee.toFixed(0)} kcal</strong>.`;
-        } else {
-            resultDiv.innerHTML = 'Proszę wprowadzić prawidłowe dane.';
-        }
-    });
-
-    // Skrypt do przewijania do góry strony
+    // Skrypt do przewijania strony do góry
     let mybutton = document.getElementById("btnTop");
     window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             mybutton.style.display = "block";
         } else {
             mybutton.style.display = "none";
         }
-    };
+    }
+
     function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
 
-    // Skrypt dla sekcji FAQ (pytania i odpowiedzi)
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const faqItem = question.parentElement;
-            faqItem.classList.toggle('active');
+    // Skrypt do rozwijania pytań FAQ
+    document.addEventListener('DOMContentLoaded', () => {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const parent = question.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Skrypt dla kalkulatora BMI
+        const bmiCalcBtn = document.getElementById('bmi-calc');
+        bmiCalcBtn.addEventListener('click', () => {
+            const height = document.getElementById('bmi-height').value;
+            const weight = document.getElementById('bmi-weight').value;
+            const resultElement = document.getElementById('bmi-result');
+
+            if (height > 0 && weight > 0) {
+                const bmi = (weight / ((height / 100) * (height / 100))).toFixed(2);
+                let category = '';
+
+                if (bmi < 18.5) {
+                    category = 'niedowaga';
+                } else if (bmi >= 18.5 && bmi <= 24.9) {
+                    category = 'waga prawidłowa';
+                } else if (bmi >= 25 && bmi <= 29.9) {
+                    category = 'nadwaga';
+                } else {
+                    category = 'otyłość';
+                }
+
+                resultElement.textContent = `Twoje BMI wynosi ${bmi} (${category}).`;
+                resultElement.style.display = 'block';
+            } else {
+                resultElement.textContent = 'Proszę wprowadzić prawidłowe dane.';
+                resultElement.style.display = 'block';
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const blogPost = this.closest('.blog-post');
+                const fullText = blogPost.querySelector('.full-text');
+                const shortText = blogPost.querySelector('.short-text');
+
+                if (fullText.style.display === 'none') {
+                    fullText.style.display = 'block'; // Pokaż pełny tekst
+                    shortText.style.display = 'none'; // Ukryj krótki tekst
+                    this.textContent = 'Zwiń'; // Zmień tekst przycisku na "Zwiń"
+                } else {
+                    fullText.style.display = 'none'; // Ukryj pełny tekst
+                    shortText.style.display = 'block'; // Pokaż krótki tekst
+                    this.textContent = 'Czytaj dalej'; // Zmień tekst przycisku na "Czytaj dalej"
+                }
+            });
         });
     });
 </script>
