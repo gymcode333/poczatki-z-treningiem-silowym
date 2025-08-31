@@ -351,10 +351,16 @@
         #btnTop:hover {
             background-color: #0b5ed7;
         }
-        #uwaga {
-            text-decoration: underline;
-            color: red;
-            font-size: 20px
+        .uwaga-box {
+            background-color: #f8d7da; /* Jasnoczerwone tło, ale nie rażące */
+            color: #721c24; /* Ciemniejszy, bordowy kolor tekstu */
+            border: 1px solid #f5c6cb; /* Delikatna ramka */
+            border-radius: 8px; /* Zaokrąglone rogi */
+            padding: 15px; /* Wewnętrzny odstęp */
+            margin: 20px 0; /* Zewnętrzne odstępy */
+            font-weight: 600; /* Pogrubienie tekstu */
+            font-size: 1rem; /* Utrzymanie standardowego rozmiaru czcionki */
+            line-height: 1.5;
         }
         p, ul, ol, li, label, input, select, footer {
             font-family: 'Lato', sans-serif;
@@ -438,6 +444,69 @@
         .blog-post p {
             margin-bottom: 10px; /* Zapewnia konsekwentny odstęp */
         }
+         /* Tryb ciemny */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        body.dark-mode main {
+            background-color: #1e1e1e;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        body.dark-mode h2,
+        body.dark-mode h3 {
+            color: #e0e0e0;
+        }
+        body.dark-mode h2 {
+            border-left-color: #3498DB;
+        }
+        body.dark-mode p,
+        body.dark-mode ul,
+        body.dark-mode li,
+        body.dark-mode label,
+        body.dark-mode strong {
+            color: #ccc;
+        }
+        body.dark-mode .step-card,
+        body.dark-mode .blog-post,
+        body.dark-mode .faq-question {
+            background-color: #2c2c2c;
+            border-color: #444;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        body.dark-mode .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        body.dark-mode .calculator {
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+        }
+        body.dark-mode .calculator input,
+        body.dark-mode .calculator select {
+            background-color: #383838;
+            color: #e0e0e0;
+            border-color: #555;
+        }
+        body.dark-mode .result {
+            background-color: #444;
+            color: #e0e0e0;
+        }
+        body.dark-mode .uwaga-box {
+            background-color: #3a1518;
+            color: #e9959e;
+            border-color: #721c24;
+        }
+        body.dark-mode table th,
+        body.dark-mode table td {
+            border-color: #444;
+        }
+        body.dark-mode table th {
+            background-color: #2c2c2c;
+        }
+        body.dark-mode table tr:nth-child(even) {
+            background-color: #222;
+        }
     </style>
 </head>
 <body>
@@ -447,6 +516,7 @@
         <h1>Rozpocznij swoją podróż w świecie siły i zdrowia!</h1>
         <p>Odkryj kompletny przewodnik dla początkujących, gotowe plany treningowe i porady, które naprawdę działają.</p>
         <a href="#przykladowe-plany" class="cta-button">Odkryj plany treningowe</a>
+        <button id="darkModeToggle" class="cta-button" style="margin-top: 20px; font-size: 1.1rem;">Tryb ciemny 🌙</button>
     </div>
 </header>
 
@@ -504,7 +574,7 @@
     </section>
 
     <section id="weights">
-        <h2><span class="step-icon"></span> Dobór obciążenia i progresywne przeładowanie🏋️‍♂️</h2>
+        <h2><span class="step-icon"></span> Dobór obciążenia i progresywne przeładowanie💪</h2>
         <p>Wzrost siły i masy mięśniowej (tzw. hipertrofia) jest efektem adaptacji organizmu do coraz większych obciążeń. To zjawisko nazywamy **progresywnym przeładowaniem**.</p>
         <p>Jak prawidłowo je stosować?</p>
         <ul>
@@ -517,9 +587,9 @@
     </section>
 
     <section id="przykladowe-plany">
-        <h2>Przykładowe plany treningowe</h2>
-        <section id="uwaga">
-            <p id="uwaga">!Pamiętaj, że dla każdej osoby plan treningowy powinien być dobierany indywidualnie. Poniższe plany mają charakter poglądowy i powinny być traktowane jako punkt wyjścia do stworzenia własnego programu treningowego. Dobieraj ilość powtórzeń w taki sposób, aby trening był wyzwaniem, ale nie kosztem poprawnej techniki!</p>
+         <h2><span class="step-icon"></span> Przykładowe plany treningowe🏋️‍♂️</h2>
+        <section class="uwaga-box">
+            <p>Pamiętaj, że dla każdej osoby plan treningowy powinien być dobierany indywidualnie. Poniższe plany mają charakter poglądowy i powinny być traktowane jako punkt wyjścia do stworzenia własnego programu treningowego. Dobieraj ilość powtórzeń w taki sposób, aby trening był wyzwaniem, ale nie kosztem poprawnej techniki!</p>
         </section>
 
         <section class="plan-section">
@@ -919,6 +989,28 @@
 <button onclick="topFunction()" id="btnTop" title="Przejdź na górę">↑</button>
 
 <script>
+     // --- SKRYPT DLA TRYBU CIEMNEGO ---
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Sprawdź preferencje użytkownika z localStorage przy ładowaniu strony
+    const userPreference = localStorage.getItem('darkMode');
+    if (userPreference === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.innerHTML = 'Tryb jasny ☀️';
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'disabled');
+            darkModeToggle.innerHTML = 'Tryb ciemny 🌙';
+        } else {
+            body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+            darkModeToggle.innerHTML = 'Tryb jasny ☀️';
+        }
+    });
     // Skrypt do przewijania strony do góry
     let mybutton = document.getElementById("btnTop");
     window.onscroll = function() {
