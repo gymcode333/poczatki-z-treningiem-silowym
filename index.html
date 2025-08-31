@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Kompletny poradnik dla początkujących w treningu siłowym – plany treningowe, dieta, kalkulatory BMI i kalorii, suplementy. Zacznij budować formę już dziś!">
     <meta name="keywords" content="trening siłowy, poradnik trening, ćwiczenia, plan treningowy, siłownia, fitness" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6668996169005006"
+     crossorigin="anonymous">
+    </script>
     <title>Początki z Treningiem Siłowym – Kompletny poradnik</title>
     <style>
         /* Reset i podstawy */
@@ -507,55 +510,87 @@
         body.dark-mode table tr:nth-child(even) {
             background-color: #222;
         }
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: none; /* Ustawienie tła na 'none' */
+            border: none; /* Usunięcie obramowania */
+            color: #3498DB; /* Kolor samej ikony */
+            font-size: 2.2rem; /* Większy rozmiar ikony dla lepszej widoczności */
+            cursor: pointer;
+            z-index: 1000;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .mode-toggle:hover {
+            color: #2980B9; /* Zmiana koloru po najechaniu myszką */
+            transform: scale(1.1);
+        }
+
+        body.dark-mode .mode-toggle {
+            color: #f1c40f; /* Kolor ikony w trybie ciemnym */
+        }
+
+        body.dark-mode .mode-toggle:hover {
+            color: #f39c12;
+        }
+
+        @media (max-width: 600px) {
+        .mode-toggle {
+            font-size: 1.8rem;
+            top: 15px;
+            right: 15px;
+            }
+        }
     </style>
 </head>
 <body>
-
 <header class="hero-section">
-    <div class="hero-content">
+    <section class="hero-content">
         <h1>Rozpocznij swoją podróż w świecie siły i zdrowia!</h1>
         <p>Odkryj kompletny przewodnik dla początkujących, gotowe plany treningowe i porady, które naprawdę działają.</p>
         <a href="#przykladowe-plany" class="cta-button">Odkryj plany treningowe</a>
-        <button id="darkModeToggle" class="cta-button" style="margin-top: 20px; font-size: 1.1rem;">Tryb ciemny 🌙</button>
-    </div>
+        <button id="darkModeToggle" class="mode-toggle">🌙</button>
+    </section>
 </header>
 
 <main>
     <section id="start">
         <h2>Jak zacząć trening siłowy?</h2>
         <p>Rozpoczęcie treningu siłowego to inwestycja w zdrowie i sylwetkę. Aby uniknąć błędów i osiągnąć trwałe rezultaty, kluczowe jest świadome podejście do procesu.</p>
-        <div class="steps-grid">
-            <div class="step-card">
+        <section class="steps-grid">
+            <section class="step-card">
                 <span class="step-icon">🎯</span>
                 <h3>Określ cel i priorytety</h3>
                 <p>Zastanów się, czy dążysz do redukcji tkanki tłuszczowej, budowy masy mięśniowej czy poprawy ogólnej sprawności. Twój cel będzie dyktował plan treningowy i dietę.</p>
-            </div>
-            <div class="step-card">
+            </section>
+            <section class="step-card">
                 <span class="step-icon">🧑‍⚕️</span>
                 <h3>Skonsultuj się</h3>
                 <p>W przypadku chorób, kontuzji lub wątpliwości, porozmawiaj z lekarzem lub fizjoterapeutą. Upewnij się, że Twój organizm jest gotowy na wysiłek.</p>
-            </div>
-            <div class="step-card">
+            </section>
+            <section class="step-card">
                 <span class="step-icon">🏋️</span>
                 <h3>Opanuj technikę</h3>
                 <p>Zanim dodasz obciążenie, skup się na perfekcyjnej technice każdego ćwiczenia. To fundament bezpieczeństwa i efektywności. Korzystaj z zasobów edukacyjnych, takich jak filmy instruktażowe lub porady trenera.</p>
-            </div>
-            <div class="step-card">
+            </section>
+            <section class="step-card">
                 <span class="step-icon">📝</span>
                 <h3>Wybierz plan treningowy</h3>
                 <p>Zacznij od planów ogólnorozwojowych, takich jak FBW (Full Body Workout). Pozwalają one na równomierne wzmacnianie wszystkich partii ciała i adaptację układu nerwowego.</p>
-            </div>
-            <div class="step-card">
+            </section>
+            <section class="step-card">
                 <span class="step-icon">💪</span>
                 <h3>Wprowadź progresję</h3>
                 <p>Kluczem do wzrostu siły i mięśni jest stopniowe zwiększanie wymagań. Prowadź dziennik treningowy, by monitorować postępy w zakresie ciężaru, liczby powtórzeń i serii.</p>
-            </div>
-            <div class="step-card">
+            </section>
+            <section class="step-card">
                 <span class="step-icon">🛌</span>
                 <h3>Zapewnij regenerację</h3>
                 <p>Mięśnie rosną i regenerują się podczas odpoczynku. Niewystarczająca ilość snu (7–9 godzin na dobę) oraz brak dni wolnych od treningu mogą prowadzić do przetrenowania i zastoju.</p>
-            </div>
-        </div>
+            </section>
+        </section>
         <p>Pamiętaj, że konsekwencja i cierpliwość są ważniejsze niż krótkotrwała, intensywna motywacja. Systematyczna praca przynosi najlepsze rezultaty.</p>
     </section>
 
@@ -997,18 +1032,18 @@
     const userPreference = localStorage.getItem('darkMode');
     if (userPreference === 'enabled') {
         body.classList.add('dark-mode');
-        darkModeToggle.innerHTML = 'Tryb jasny ☀️';
+        darkModeToggle.innerHTML = '☀️';
     }
 
     darkModeToggle.addEventListener('click', () => {
         if (body.classList.contains('dark-mode')) {
             body.classList.remove('dark-mode');
             localStorage.setItem('darkMode', 'disabled');
-            darkModeToggle.innerHTML = 'Tryb ciemny 🌙';
+            darkModeToggle.innerHTML = '🌙';
         } else {
             body.classList.add('dark-mode');
             localStorage.setItem('darkMode', 'enabled');
-            darkModeToggle.innerHTML = 'Tryb jasny ☀️';
+            darkModeToggle.innerHTML = '☀️';
         }
     });
     // Skrypt do przewijania strony do góry
