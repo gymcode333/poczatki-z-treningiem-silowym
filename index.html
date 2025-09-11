@@ -27,6 +27,60 @@
             flex-direction: column;
         }
 
+        /* Spis treści */
+        #table-of-contents {
+            margin-bottom: 30px;
+            padding: 25px; /* Zwiększony padding dla lepszych odstępów */
+            background: #e9ecef;
+            border-radius: 8px;
+            border-left: 5px solid #3498DB;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        #table-of-contents h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem; /* Większa czcionka dla tytułu */
+            margin-bottom: 20px; /* Zwiększony odstęp od listy */
+            color: #2C3E50;
+            text-transform: uppercase; /* Dodanie małych liter */
+            letter-spacing: 1px;
+        }
+
+        #table-of-contents ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #table-of-contents ul li {
+            margin-bottom: 12px; /* Zwiększony odstęp między pozycjami */
+        }
+
+        #table-of-contents a {
+            text-decoration: none;
+            color: #3498DB;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease; /* Płynne przejście */
+            display: flex; /* Ustawienie flexbox dla wyrównania ikony i tekstu */
+            align-items: center; /* Wyrównanie w pionie */
+        }
+
+        #table-of-contents a span {
+            font-size: 1.2rem;
+            margin-right: 10px; /* Odstęp między ikoną a tekstem */
+            transition: transform 0.3s ease; /* Animacja dla ikony */
+        }
+
+        #table-of-contents a:hover {
+            color: #2980B9;
+            text-decoration: underline;
+            transform: translateX(5px); /* Delikatne przesunięcie w prawo po najechaniu */
+        }
+
+        #table-of-contents a:hover span {
+            transform: rotate(10deg); /* Delikatny obrót ikony */
+        }
+
         /* Sekcja Hero - Nowoczesny Nagłówek */
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1092878/pexels-photo-1092878.jpeg') no-repeat center center fixed;
@@ -229,13 +283,66 @@
             text-align: center;
         }
 
-        /* Footer */
+        /* Nowy styl dla stopki */
         footer {
-            text-align: center;
-            padding: 20px 10px;
+            padding: 40px 20px;
             background: #2C3E50;
-            color: #aaa;
             font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto 20px;
+            text-align: left;
+        }
+
+        .footer-info, .footer-links, .footer-contact {
+            flex-basis: 30%;
+            margin-bottom: 20px;
+        }
+
+        .footer-info h3, .footer-links h4, .footer-contact h4 {
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #3498DB;
+        }
+
+        
+
+        /* Responsywność dla stopki */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        body.dark-mode footer {
+            background: #1e1e1e;
+            color: #888;
+        }
+
+        body.dark-mode .footer-info h3, body.dark-mode .footer-links h4, body.dark-mode .footer-contact h4 {
+            color: #ccc;
         }
 
         /* Responsive */
@@ -541,6 +648,10 @@
             right: 15px;
             }
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -554,8 +665,24 @@
 </header>
 
 <main>
+    <nav id="table-of-contents">
+        <h3>Spis treści</h3>
+        <ul>
+            <li><a href="#start"><span></span> Jak zacząć trening siłowy?</a></li>
+            <li><a href="#errors"><span></span> Najczęstsze błędy początkujących</a></li>
+            <li><a href="#weights"><span></span> Dobór obciążenia i progresywne przeładowanie</a></li>
+            <li><a href="#przykladowe-plany"><span></span> Przykładowe plany treningowe</a></li>
+            <li><a href="#diet"><span></span> Dieta – fundament sukcesu</a></li>
+            <li><a href="#supplements"><span></span> Suplementy – wsparcie, nie zamiennik</a></li>
+            <li><a href="#blog"><span></span> Blog</a></li>
+            <li><a href="#podsumowanie"><span></span> Podsumowanie</a></li>
+            <li><a href="#calculators"><span></span> Kalkulatory</a></li>
+            <li><a href="#faq"><span></span> Najczęściej zadawane pytania (FAQ)</a></li>
+        </ul>
+    </nav>
+
     <section id="start">
-        <h2>Jak zacząć trening siłowy?</h2>
+        <h2>Jak zacząć trening siłowy?🚀</h2>
         <p>Rozpoczęcie treningu siłowego to inwestycja w zdrowie i sylwetkę. Aby uniknąć błędów i osiągnąć trwałe rezultaty, kluczowe jest świadome podejście do procesu.</p>
         <section class="steps-grid">
             <section class="step-card">
@@ -1016,7 +1143,15 @@
 </main>
 
 <footer>
-    <p>&copy; 2025 Poradnik Treningowy. Wszystkie prawa zastrzeżone.</p>
+    <section class="footer-container">
+        <section class="footer-info">
+            <h3>TreningSiła.pl</h3>
+            <p style="color: white;">Twój przewodnik po świecie treningu siłowego. Z nami osiągniesz swoje cele, budując siłę i zdrowie krok po kroku.</p>
+        </section>
+        
+    
+    </section>
+    <p class="copyright" style="color: white;">&copy; 2025 TreningSiła.pl. Wszelkie prawa zastrzeżone.</p>
 </footer>
 
 <button onclick="topFunction()" id="btnTop" title="Przejdź na górę">↑</button>
