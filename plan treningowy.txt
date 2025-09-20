@@ -1,0 +1,30 @@
+A|      1. Suwnica
+	2. BP (lekkie)
+	3. ROW (pół ciężkie)
+	4. Francuskie wyciskanie
+	5. Tył barków
+
+
+B|      1. OHP
+	2. DL
+	3. CHIN UP
+	4. Wznosy
+	5. Młotki bieps
+
+C|	1. BP (ciężkie)
+	2. SQ (lekkie)
+	3. Rozpiętki
+	4. ROW szeroko
+	5. Biceps curl
+	6. Triceps wyciąg
+
+
+
+	Nogi : 8
+	Klata : 12
+	Plecy : 12
+	Barki : 12
+	Biceps : 4
+	Triceps : 4
+	Brzuch :  W domu kółko
+	

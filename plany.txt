@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Początki z Treningiem Siłowym — Plany Treningowe</title>
+    <meta name="description" content="Gotowe plany treningowe dla początkujących i zaawansowanych. Wybierz plan dla siebie: FBW, PPL, Split i zacznij budować siłę i sylwetkę.">
+    <meta name="keywords" content="plan treningowy, trening siłowy, siłownia, FBW, PPL, Split, ćwiczenia, porady treningowe" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Początki z Treningiem Siłowym — Plany Treningowe">
+    <meta property="og:description" content="Gotowe plany treningowe dla początkujących i zaawansowanych. Wybierz plan dla siebie: FBW, PPL, Split i zacznij budować siłę i sylwetkę.">
+    <meta property="og:image" content="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="/favicon.ico">
+    <style>
+        :root{
+            --bg:#f6f8fa;
+            --card:#ffffff;
+            --muted:#6b7280;
+            --accent:#2b6cb0;
+            --accent-2:#f0c040;
+            --text:#0f1724;
+            --radius:12px;
+            --max-width:1200px;
+            --nav-bg:#1f2937;
+            --nav-text:#fff;
+            --nav-hover:#2b6cb0;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            font-family:'Lato',system-ui,Arial,sans-serif;
+            background:var(--bg);
+            color:var(--text);
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            line-height:1.6;
+            display:flex;
+            flex-direction:column;
+            min-height:100vh;
+        }
+        header{
+            position:relative;
+            background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg') center/cover no-repeat;
+            color:#fff;
+            padding:28px 16px 0;
+        }
+        .topbar{
+            max-width:var(--max-width);
+            margin:0 auto;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:16px;
+            flex-wrap:wrap;
+        }
+        .brand{
+            display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit
+        }
+        .brand h1{font-family:'Montserrat',sans-serif;font-size:1.25rem;margin:0}
+        .brand .subtitle{font-size:.8rem;color:rgba(255,255,255,0.85)}
+        nav.primary{
+            display:flex;gap:18px;align-items:center;flex-wrap:wrap;
+        }
+        nav.primary a{
+            color:var(--nav-text);
+            text-decoration:none;
+            font-weight:600;
+            padding:8px 12px;
+            border-radius:8px;
+            transition: all .2s ease;
+        }
+        nav.primary a:hover, nav.primary a[aria-current="page"]{
+            background:var(--nav-hover);
+            color:#fff;
+        }
+        .menu-toggle{
+            display:none;
+            font-size:1.25rem;
+            cursor:pointer;
+        }
+        .hero{
+            max-width:var(--max-width);
+            margin:28px auto 0;
+            padding:28px 20px;
+            display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px
+        }
+        .hero .lead{max-width:720px}
+        .hero h2{font-family:'Montserrat';font-size:2rem;margin:0 0 8px}
+        .hero p{margin:0;color:rgba(255,255,255,0.9)}
+        .container{max-width:var(--max-width);margin:30px auto;padding:0 16px;flex:1;width:100%}
+        .layout{display:grid;grid-template-columns:1fr 320px;gap:28px}
+        main{min-width:0;}
+        .plans-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:2rem;}
+        .plan-card{
+            background-color: var(--card);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: 0 6px 18px rgba(15,23,36,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .plan-card:hover{transform:translateY(-5px);box-shadow: 0 10px 25px rgba(15,23,36,0.1);}
+        .plan-card h3{font-family:'Montserrat';font-size:1.75rem;margin:0 0 1rem;color:var(--text);display:flex;align-items:center;gap:12px;}
+        .plan-card h3 i{color:var(--accent);font-size:2.25rem;}
+        .plan-card .tag{
+            display:inline-block;
+            background:var(--accent-2);
+            color:#fff;
+            padding:4px 12px;
+            border-radius:8px;
+            font-size:.8rem;
+            font-weight:700;
+            text-transform:uppercase;
+            letter-spacing:.05em;
+            margin-bottom:1rem;
+        }
+        .plan-card .features li{list-style:none;margin-bottom:8px;position:relative;padding-left:24px;}
+        .plan-card .features li::before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:700;}
+        .plan-card .btn{width:100%;margin-top:20px;text-align:center;}
+        .plan-card h4{font-size:1.25rem;font-family:'Montserrat';margin:2rem 0 1rem;}
+        .plan-card table{width:100%;border-collapse:collapse;margin-top:20px;}
+        .plan-card th, .plan-card td{border:1px solid #ddd;padding:12px;text-align:left;}
+        .plan-card th{background-color:var(--accent);color:#fff;}
+        .plan-card tr:nth-child(even){background-color:#f9f9f9;}
+        footer{background:#0f1724;color:#cbd5e1;padding:28px 16px;margin-top:auto;}
+        .footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+        .footer-col{min-width:200px}
+        .footer small{color:#9aa4b2}
+        .kicker{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+        @media (max-width:980px){.layout{grid-template-columns:1fr 300px}}
+        @media (max-width:840px){.layout{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}
+        @media (max-width:768px){
+            nav.primary{display:none;flex-direction:column;width:100%;margin-top:12px;background:var(--nav-bg);padding:12px;border-radius:8px;}
+            nav.primary.show{display:flex;}
+            .menu-toggle{display:block;color:var(--nav-text);}
+        }
+        @media (max-width:520px){.hero h2{font-size:1.25rem}.plan-card{padding:20px}}
+        body.dark{
+            --bg:#0b1220;
+            --card:#0f1724;
+            --text:#e6eef8;
+            --muted:#98a0b2;
+            --nav-bg:#1a1f2b;
+            --nav-text:#e6eef8;
+            --nav-hover:#2b6cb0;
+        }
+        body.dark .plan-card{box-shadow: 0 6px 18px rgba(0,0,0,0.4);}
+        body.dark .plan-card:hover{box-shadow: 0 10px 25px rgba(0,0,0,0.6);}
+        body.dark .plan-card tr:nth-child(even){background-color:#1a1f2b;}
+        body.dark .plan-card th{background-color:#1c3d5e;}
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <div class="topbar">
+            <a class="brand" href="/" aria-label="Początki z Treningiem Siłowym — strona główna">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect width="24" height="24" rx="6" fill="#fff" fill-opacity="0.12"></rect>
+                    <path d="M6 15c1.333-2 3.333-4 6-4s4.667 2 6 4" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <div>
+                    <h1>Początki z Treningiem Siłowym</h1>
+                    <div class="subtitle">Porady dla początkujących</div>
+                </div>
+            </a>
+            <span class="menu-toggle" id="menuToggle" aria-label="Pokaż menu">☰</span>
+            <nav class="primary" role="navigation" aria-label="Główne menu">
+                <a href="index.html">Strona główna</a>
+                <a href="plany.html" aria-current="page">Plany treningowe</a>
+                <a href="blog.html">Blog</a>
+                <a href="#newsletter">Dołącz do newslettera</a>
+            </nav>
+            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+                <button id="darkToggle" aria-pressed="false" class="btn btn-ghost">🌙</button>
+            </div>
+        </div>
+        <div class="hero" role="region" aria-label="Wprowadzenie do bloga">
+            <div class="lead">
+                <div class="kicker">Plany treningowe</div>
+                <h2>Znajdź idealny plan treningowy dla siebie</h2>
+                <p>Niezależnie od Twojego poziomu zaawansowania, dobrze dobrany plan to klucz do sukcesu. Wybierz program, który pomoże Ci osiągnąć Twoje cele.</p>
+            </div>
+            
+        </div>
+    </header>
+    <div class="container">
+        <main id="main" class="site-main" role="main">
+            <h2>Wybierz plan dopasowany do Ciebie</h2>
+            <p>Dobrze zaplanowany trening to podstawa efektywnego budowania sylwetki i siły. Poniżej znajdziesz sprawdzone i popularne schematy, które pomogą Ci zorganizować swoje sesje na siłowni i zmaksymalizować efekty.</p>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3><i class="fas fa-dumbbell"></i>FBW</h3>
+                    <div class="tag">Dla początkujących</div>
+                    <p>Plan, który angażuje wszystkie główne grupy mięśniowe podczas jednej sesji. Idealny na początek, aby nauczyć się techniki i zbudować podstawową siłę. Polecany 2-3 razy w tygodniu.</p>
+                    <ul class="features">
+                        <li>Równomierny rozwój wszystkich partii.</li>
+                        <li>Szybka adaptacja organizmu.</li>
+                        <li>Idealny do opanowania techniki.</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Zobacz plan</a>
+                </div>
+                <div class="plan-card">
+                    <h3><i class="fas fa-running"></i>PPL</h3>
+                    <div class="tag">Dla średnio zaawansowanych</div>
+                    <p>Podział na 3 sesje: Push (pchanie), Pull (ciągnięcie) i Legs (nogi). Pozwala na większą objętość i intensywność dla poszczególnych partii. Trenuj 3 lub 6 razy w tygodniu.</p>
+                    <ul class="features">
+                        <li>Większa objętość dla partii.</li>
+                        <li>Mniejszy nakład czasu na sesję.</li>
+                        <li>Możliwość trenowania partii 2x w tygodniu.</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Zobacz plan</a>
+                </div>
+                <div class="plan-card">
+                    <h3><i class="fas fa-weight-lifter"></i>Split</h3>
+                    <div class="tag">Dla zaawansowanych</div>
+                    <p>Klasyczny plan dzielony, gdzie każda sesja jest poświęcona 1-2 grupom mięśniowym. Idealny, gdy potrzebujesz dużej objętości. Najczęściej trenowany 4-5 razy w tygodniu.</p>
+                    <ul class="features">
+                        <li>Maksymalna objętość dla partii.</li>
+                        <li>Większa kontrola nad rozwojem.</li>
+                        <li>Możliwość skupienia na detalach.</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Zobacz plan</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <strong>Początki z Treningiem Siłowym</strong>
+                <p class="small">Praktyczne porady i plany dla początkujących. Twój start do silniejszej wersji siebie.</p>
+            </div>
+            <div class="footer-col">
+                <div style="font-weight:700">Szybkie linki</div>
+                <ul>
+                    <li><a href="#">Plany treningowe</a></li>
+                    <li><a href="#">Kalkulatory</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Polityka prywatności</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <div style="font-weight:700">Kontakt</div>
+                <div class="small">kontakt@silny-start.pl<br>+48 123 456 789</div>
+                <div style="margin-top:8px">
+                    <a href="#" style="margin-right:6px">Facebook</a>
+                    <a href="#" style="margin-right:6px">Instagram</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div style="max-width:var(--max-width);margin:18px auto 0;padding:0 16px;text-align:center">
+            <small>© 2025 Początki z Treningiem Siłowym. Wszelkie prawa zastrzeżone.</small>
+        </div>
+    </footer>
+    <script>
+        const btn = document.getElementById('darkToggle');
+        function setDark(d){
+            if(d){document.body.classList.add('dark');btn.textContent='☀️';btn.setAttribute('aria-pressed','true');}
+            else{document.body.classList.remove('dark');btn.textContent='🌙';btn.setAttribute('aria-pressed','false');}
+            localStorage.setItem('dark-mode', d? '1':'0');
+        }
+        btn.addEventListener('click', ()=>{setDark(!document.body.classList.contains('dark'))});
+        if(localStorage.getItem('dark-mode')==='1') setDark(true);
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.querySelector('nav.primary');
+        menuToggle.addEventListener('click', ()=>{nav.classList.toggle('show');});
+    </script>
+</body>
+</html>
