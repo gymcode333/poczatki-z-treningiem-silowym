@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Plan Treningowy FBW — Początki z Treningiem Siłowym</title>
+    <meta name="description" content="Kompletny plan treningowy FBW (Full Body Workout) dla początkujących. Ćwiczenia na całe ciało w 3 dni w tygodniu.">
+    <meta name="keywords" content="plan FBW, trening FBW, full body workout, plan treningowy, siłownia, trening dla początkujących" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Plan Treningowy FBW — Początki z Treningiem Siłowym">
+    <meta property="og:description" content="Kompletny plan FBW dla początkujących. Zbuduj siłę i sylwetkę w 3 dni w tygodniu.">
+    <meta property="og:image" content="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --accent: #2b6cb0;
+    --accent-2: #f0c040;
+    --text: #0f1724;
+    --radius: 12px;
+    --max-width: 1200px;
+    --nav-bg: #1f2937;
+    --nav-text: #fff;
+    --nav-hover: #2b6cb0;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+    margin: 0;
+    font-family: 'Lato', system-ui, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ====== Header ====== */
+header {
+    position: relative;
+    background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+        url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg') center/cover no-repeat;
+    color: #fff;
+    padding: 28px 16px 0;
+}
+.topbar {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.brand {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; color: inherit;
+}
+.brand h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    margin: 0;
+}
+.brand .subtitle { font-size: .8rem; color: rgba(255,255,255,0.85); }
+
+nav.primary {
+    display: flex; gap: 18px; align-items: center; flex-wrap: wrap;
+}
+nav.primary a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all .2s ease;
+}
+nav.primary a:hover,
+nav.primary a[aria-current="page"] {
+    background: var(--nav-hover);
+    color: #fff;
+}
+
+.hero {
+    max-width: var(--max-width);
+    margin: 28px auto 0;
+    padding: 28px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 20px;
+}
+.hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin: 0 0 8px;
+}
+.hero p { margin: 0; color: rgba(255,255,255,0.9); }
+
+/* ====== Main content ====== */
+.container {
+    max-width: var(--max-width);
+    margin: 30px auto;
+    padding: 0 16px;
+    flex: 1;
+    width: 100%;
+}
+.site-main h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+.site-main p { margin-bottom: 1rem; }
+
+/* ====== Tabela planu ====== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 6px 18px rgba(15,23,36,0.06);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: bold;
+}
+tr:nth-child(even) { background-color: #f9f9f9; }
+
+/* ====== Lista wskazówek ====== */
+.site-main ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+.site-main li {
+    margin-bottom: 8px;
+}
+
+/* ====== Przyciski ====== */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #1a4f85;
+}
+.btn-ghost {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* ====== Footer ====== */
+footer {
+    background: #0f1724;
+    color: #cbd5e1;
+    padding: 28px 16px;
+    margin-top: auto;
+}
+.footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.footer-col { min-width: 200px; }
+.footer small { color: #9aa4b2; }
+
+/* ====== Tryb ciemny ====== */
+body.dark {
+    --bg: #0b1220;
+    --card: #0f1724;
+    --text: #e6eef8;
+    --muted: #98a0b2;
+    --nav-bg: #1a1f2b;
+    --nav-text: #e6eef8;
+    --nav-hover: #2b6cb0;
+}
+body.dark table tr:nth-child(even) { background-color: #1a1f2b; }
+body.dark th { background-color: #1c3d5e; }
+
+/* ====== Responsywność ====== */
+@media (max-width: 768px) {
+    nav.primary { display: none; }
+    .hero h2 { font-size: 1.5rem; }
+    table, th, td { font-size: 0.9rem; }
+}
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <div class="topbar">
+            <a class="brand" href="index.html" aria-label="Powrót na stronę główną">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect width="24" height="24" rx="6" fill="#fff" fill-opacity="0.12"></rect>
+                    <path d="M6 15c1.333-2 3.333-4 6-4s4.667 2 6 4" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <div>
+                    <h1>Początki z Treningiem Siłowym</h1>
+                    <div class="subtitle">Porady dla początkujących</div>
+                </div>
+            </a>
+            <nav class="primary" role="navigation" aria-label="Główne menu">
+                <a href="index.html">Strona główna</a>
+                <a href="plany.html">Plany treningowe</a>
+                <a href="blog.html">Blog</a>
+                <a href="#newsletter">Newsletter</a>
+            </nav>
+            <button id="darkToggle" aria-pressed="false" class="btn btn-ghost">🌙</button>
+        </div>
+        <div class="hero">
+            <div class="lead">
+                <div class="kicker">Plan treningowy</div>
+                <h2>FBW — Full Body Workout</h2>
+                <p>Kompletny plan na całe ciało, 3 dni w tygodniu. Idealny dla początkujących i średniozaawansowanych.</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main id="main" class="site-main" role="main">
+            <h2>Plan FBW — przykładowy tydzień</h2>
+            <p>Ten plan zakłada 3 treningi w tygodniu, np. poniedziałek, środa, piątek. Każdy trening angażuje wszystkie główne partie mięśniowe.</p>
+            
+            <table>
+                <tr><th>Dzień</th><th>Ćwiczenie</th><th>Serie x Powtórzenia</th></tr>
+                <tr><td rowspan="6">Trening A</td><td>Przysiad ze sztangą</td><td>4x6-8</td></tr>
+                <tr><td>Wyciskanie sztangi na ławce</td><td>4x6-8</td></tr>
+                <tr><td>Wiosłowanie sztangą</td><td>3x8-10</td></tr>
+                <tr><td>Wyciskanie nad głowę (OHP)</td><td>3x8-10</td></tr>
+                <tr><td>Uginanie ramion ze sztangą</td><td>3x10-12</td></tr>
+                <tr><td>Plank</td><td>3x max czas</td></tr>
+
+                <tr><td rowspan="6">Trening B</td><td>Martwy ciąg klasyczny</td><td>4x5</td></tr>
+                <tr><td>Podciąganie nachwytem (lub ściąganie drążka)</td><td>4x max / 4x10</td></tr>
+                <tr><td>Wyciskanie hantli na skosie dodatnim</td><td>3x8-10</td></tr>
+                <tr><td>Wykroki z hantlami</td><td>3x10 na nogę</td></tr>
+                <tr><td>Face Pulls</td><td>3x12-15</td></tr>
+                <tr><td>Unoszenie nóg w zwisie</td><td>3x12-15</td></tr>
+            </table>
+
+            <h3>Wskazówki do planu</h3>
+            <ul>
+                <li>Trenuj 3 dni w tygodniu z co najmniej jednym dniem przerwy pomiędzy sesjami.</li>
+                <li>Zwiększaj ciężary progresywnie (2,5–5% co 1–2 tygodnie).</li>
+                <li>Skup się na technice, nie tylko na ciężarze.</li>
+                <li>Rozgrzewka przed każdym treningiem to podstawa!</li>
+            </ul>
+
+            <a href="plany.html" class="btn btn-primary">← Wróć do planów</a>
+        </main>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <strong>Początki z Treningiem Siłowym</strong>
+                <p class="small">Praktyczne porady i plany dla początkujących. Twój start do silniejszej wersji siebie.</p>
+            </div>
+            <div class="footer-col">
+                <div style="font-weight:700">Szybkie linki</div>
+                <ul>
+                    <li><a href="plany.html">Plany treningowe</a></li>
+                    <li><a href="#">Kalkulatory</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Polityka prywatności</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <div style="font-weight:700">Kontakt</div>
+                <div class="small">kontakt@silny-start.pl<br>+48 123 456 789</div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:18px;">
+            <small>© 2025 Początki z Treningiem Siłowym. Wszelkie prawa zastrzeżone.</small>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('darkToggle');
+        function setDark(d){
+            if(d){document.body.classList.add('dark');btn.textContent='☀️';btn.setAttribute('aria-pressed','true');}
+            else{document.body.classList.remove('dark');btn.textContent='🌙';btn.setAttribute('aria-pressed','false');}
+            localStorage.setItem('dark-mode', d? '1':'0');
+        }
+        btn.addEventListener('click', ()=>{setDark(!document.body.classList.contains('dark'))});
+        if(localStorage.getItem('dark-mode')==='1') setDark(true);
+    </script>
+</body>
+</html>
